@@ -1,10 +1,34 @@
-﻿namespace NBitcoin.Protocol
+﻿using System;
+
+namespace NBitcoin.Protocol
 {
+	public struct ProtocolVersion2
+	{
+		public ProtocolVersion2(ProtocolVersion protocolVersion)
+		{
+			Version = (uint) protocolVersion;
+		}
+		public ProtocolVersion2(uint protocolVersion)
+		{
+			Version = protocolVersion;
+		}
+		public uint Version { get; set; }
+		public static implicit operator ProtocolVersion(ProtocolVersion2 d)
+		{
+			return (ProtocolVersion) d.Version;
+		}
+		public static implicit operator uint(ProtocolVersion2 d) 
+		{
+			return d.Version;
+		}
+	}
+
 	/// <summary>
 	/// Network protocol versioning
 	/// </summary>
 	public enum ProtocolVersion : uint
 	{
+
 		PROTOCOL_VERSION = 70012,
 
 		/// <summary>

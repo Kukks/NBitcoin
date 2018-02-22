@@ -21,16 +21,10 @@ namespace NBitcoin.Protocol
 
 		}
 		uint version = (uint)ProtocolVersion.PROTOCOL_VERSION;
-		public ProtocolVersion Version
+		public ProtocolVersion2 Version
 		{
-			get
-			{
-				return (ProtocolVersion)version;
-			}
-			set
-			{
-				version = (uint)value;
-			}
+			get => new ProtocolVersion2(version);
+			set => version = value;
 		}
 
 		BlockLocator blockLocators;

@@ -70,19 +70,20 @@ namespace NBitcoin.Protocol
 		}
 		uint version;
 
-		public ProtocolVersion Version
+		public ProtocolVersion2 Version
 		{
 			get
 			{
 				if(version == 10300) //A version number of 10300 is converted to 300 before being processed
-					return (ProtocolVersion)(300);  //https://en.bitcoin.it/wiki/Version_Handshake
-				return (ProtocolVersion)version;
+					return new ProtocolVersion2(300);  //https://en.bitcoin.it/wiki/Version_Handshake
+				return new ProtocolVersion2(version);
 			}
 			set
 			{
-				if(value == (ProtocolVersion)10300)
-					value = (ProtocolVersion)300;
-				version = (uint)value;
+				if(value == 10300)
+					version = 300;
+				else
+					version = value;
 			}
 		}
 		ulong services;

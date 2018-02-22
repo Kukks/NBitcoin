@@ -18,7 +18,7 @@ namespace NBitcoin.Protocol
 		{
 			ReuseBuffer = true;
 			TemplateBehaviors.Add(new PingPongBehavior());
-			Version = ProtocolVersion.PROTOCOL_VERSION;
+			Version = new ProtocolVersion2(ProtocolVersion.PROTOCOL_VERSION);
 			IsRelay = true;
 			Services = NodeServices.Nothing;
 			ConnectCancellation = default(CancellationToken);
@@ -57,7 +57,7 @@ namespace NBitcoin.Protocol
 			get;
 			set;
 		}
-		public ProtocolVersion Version
+		public ProtocolVersion2 Version
 		{
 			get;
 			set;
