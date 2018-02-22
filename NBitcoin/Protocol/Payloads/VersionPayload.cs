@@ -49,7 +49,7 @@ namespace NBitcoin.Protocol
 		static string _NUserAgent;
 		public static string GetNBitcoinUserAgent()
 		{
-			if(_NUserAgent == null)
+			if (_NUserAgent == null)
 			{
 #if WINDOWS_UWP
 				// get the app version
@@ -70,20 +70,19 @@ namespace NBitcoin.Protocol
 		}
 		uint version;
 
-		public ProtocolVersion2 Version
+		public ProtocolVersion Version
 		{
 			get
 			{
-				if(version == 10300) //A version number of 10300 is converted to 300 before being processed
-					return new ProtocolVersion2(300);  //https://en.bitcoin.it/wiki/Version_Handshake
-				return new ProtocolVersion2(version);
+				if (version == 10300) //A version number of 10300 is converted to 300 before being processed
+					return (ProtocolVersion)(300);  //https://en.bitcoin.it/wiki/Version_Handshake
+				return (ProtocolVersion)version;
 			}
 			set
 			{
-				if(value == 10300)
-					version = 300;
-				else
-					version = value;
+				if (value == (ProtocolVersion)10300)
+					value = (ProtocolVersion)300;
+				version = (uint)value;
 			}
 		}
 		ulong services;
@@ -196,27 +195,27 @@ namespace NBitcoin.Protocol
 		public override void ReadWriteCore(BitcoinStream stream)
 		{
 			stream.ReadWrite(ref version);
-			using(stream.ProtocolVersionScope((ProtocolVersion)version))
+			using (stream.ProtocolVersionScope((ProtocolVersion)version))
 			{
 				stream.ReadWrite(ref services);
 				stream.ReadWrite(ref timestamp);
-				using(stream.ProtocolVersionScope(ProtocolVersion.CADDR_TIME_VERSION - 1)) //No time field in version message
+				using (stream.ProtocolVersionScope(ProtocolVersion.CADDR_TIME_VERSION - 1)) //No time field in version message
 				{
 					stream.ReadWrite(ref addr_recv);
 				}
-				if(version >= 106)
+				if (version >= 106)
 				{
-					using(stream.ProtocolVersionScope(ProtocolVersion.CADDR_TIME_VERSION - 1)) //No time field in version message
+					using (stream.ProtocolVersionScope(ProtocolVersion.CADDR_TIME_VERSION - 1)) //No time field in version message
 					{
 						stream.ReadWrite(ref addr_from);
 					}
 					stream.ReadWrite(ref nonce);
 					stream.ReadWrite(ref user_agent);
-					if(version < 60002)
-						if(user_agent.Length != 0)
+					if (version < 60002)
+						if (user_agent.Length != 0)
 							throw new FormatException("Should not find user agent for current version " + version);
 					stream.ReadWrite(ref start_height);
-					if(version >= 70001)
+					if (version >= 70001)
 						stream.ReadWrite(ref relay);
 				}
 			}

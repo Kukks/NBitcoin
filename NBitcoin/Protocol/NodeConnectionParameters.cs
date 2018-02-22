@@ -18,7 +18,7 @@ namespace NBitcoin.Protocol
 		{
 			ReuseBuffer = true;
 			TemplateBehaviors.Add(new PingPongBehavior());
-			Version = new ProtocolVersion2(ProtocolVersion.PROTOCOL_VERSION);
+			Version = ProtocolVersion.PROTOCOL_VERSION;
 			IsRelay = true;
 			Services = NodeServices.Nothing;
 			ConnectCancellation = default(CancellationToken);

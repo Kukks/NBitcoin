@@ -21,6 +21,14 @@ namespace NBitcoin.Protocol
 		{
 			return d.Version;
 		}
+		public static implicit operator ProtocolVersion2(ProtocolVersion d)
+		{
+			return new ProtocolVersion2(d);
+		}
+		public static implicit operator ProtocolVersion2(uint d)
+		{
+			return new ProtocolVersion2(d);
+		}
 	}
 
 	/// <summary>

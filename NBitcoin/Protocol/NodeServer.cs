@@ -426,7 +426,7 @@ namespace NBitcoin.Protocol
 			var myExternal = Utils.EnsureIPv6(ExternalEndpoint);
 			var param2 = InboundNodeConnectionParameters.Clone();
 			param2.Nonce = Nonce;
-			param2.Version = new ProtocolVersion2(Version);
+			param2.Version = Version;
 			param2.AddressFrom = myExternal;
 			return param2;
 		}

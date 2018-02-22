@@ -594,7 +594,7 @@ namespace NBitcoin.Protocol
 			{
 				ConnectCancellation = cancellation,
 				IsRelay = isRelay,
-				Version = new ProtocolVersion2(myVersion)
+				Version = myVersion
 			});
 		}
 
@@ -643,7 +643,7 @@ namespace NBitcoin.Protocol
 			{
 				ConnectCancellation = cancellation,
 				IsRelay = isRelay,
-				Version = new ProtocolVersion2(myVersion),
+				Version = myVersion,
 				Services = NodeServices.Nothing,
 			});
 		}
