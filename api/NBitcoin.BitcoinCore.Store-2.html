@@ -82,11 +82,37 @@
       <div class="level2"><a class="xref" href="NBitcoin.BitcoinCore.BlockStore.html">BlockStore</a></div>
       <div class="level2"><a class="xref" href="NBitcoin.BitcoinCore.BlockUndoStore.html">BlockUndoStore</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.BitcoinCore.html">NBitcoin.BitcoinCore</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
   <h5 id="NBitcoin_BitcoinCore_Store_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Store&lt;TStoredItem, TItem&gt; : object where TStoredItem : StoredItem&lt;TItem&gt; where TItem : IBitcoinSerializable, new()</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete]
+public abstract class Store&lt;TStoredItem, TItem&gt;
+    where TStoredItem : StoredItem&lt;TItem&gt; where TItem : IBitcoinSerializable, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -111,13 +137,13 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BitcoinCore_Store_2__ctor_DirectoryInfo_NBitcoin_Network_.md&amp;value=---%0Auid%3A%20NBitcoin.BitcoinCore.Store%602.%23ctor(DirectoryInfo%2CNBitcoin.Network)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BitcoinCore_Store_2__ctor_System_IO_DirectoryInfo_NBitcoin_Network_.md&amp;value=---%0Auid%3A%20NBitcoin.BitcoinCore.Store%602.%23ctor(System.IO.DirectoryInfo%2CNBitcoin.Network)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/BitcoinCore/Store.cs/#L76">View Source</a>
   </span>
   <a id="NBitcoin_BitcoinCore_Store_2__ctor_" data-uid="NBitcoin.BitcoinCore.Store`2.#ctor*"></a>
-  <h4 id="NBitcoin_BitcoinCore_Store_2__ctor_DirectoryInfo_NBitcoin_Network_" data-uid="NBitcoin.BitcoinCore.Store`2.#ctor(DirectoryInfo,NBitcoin.Network)">Store(DirectoryInfo, Network)</h4>
+  <h4 id="NBitcoin_BitcoinCore_Store_2__ctor_System_IO_DirectoryInfo_NBitcoin_Network_" data-uid="NBitcoin.BitcoinCore.Store`2.#ctor(System.IO.DirectoryInfo,NBitcoin.Network)">Store(DirectoryInfo, Network)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -135,7 +161,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DirectoryInfo</span></td>
+        <td><span class="xref">System.IO.DirectoryInfo</span></td>
         <td><span class="parametername">folder</span></td>
         <td></td>
       </tr>
@@ -270,7 +296,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Regex</span></td>
+        <td><span class="xref">System.Text.RegularExpressions.Regex</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -300,7 +326,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DirectoryInfo</span></td>
+        <td><span class="xref">System.IO.DirectoryInfo</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -416,13 +442,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BitcoinCore_Store_2_AppendAll_IEnumerable__1__.md&amp;value=---%0Auid%3A%20NBitcoin.BitcoinCore.Store%602.AppendAll(IEnumerable%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BitcoinCore_Store_2_AppendAll_System_Collections_Generic_IEnumerable__1__.md&amp;value=---%0Auid%3A%20NBitcoin.BitcoinCore.Store%602.AppendAll(System.Collections.Generic.IEnumerable%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/BitcoinCore/Store.cs/#L271">View Source</a>
   </span>
   <a id="NBitcoin_BitcoinCore_Store_2_AppendAll_" data-uid="NBitcoin.BitcoinCore.Store`2.AppendAll*"></a>
-  <h4 id="NBitcoin_BitcoinCore_Store_2_AppendAll_IEnumerable__1__" data-uid="NBitcoin.BitcoinCore.Store`2.AppendAll(IEnumerable{`1})">AppendAll(IEnumerable&lt;TItem&gt;)</h4>
+  <h4 id="NBitcoin_BitcoinCore_Store_2_AppendAll_System_Collections_Generic_IEnumerable__1__" data-uid="NBitcoin.BitcoinCore.Store`2.AppendAll(System.Collections.Generic.IEnumerable{`1})">AppendAll(IEnumerable&lt;TItem&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -440,7 +466,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;TItem&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TItem&gt;</td>
         <td><span class="parametername">items</span></td>
         <td></td>
       </tr>
@@ -540,25 +566,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;TStoredItem&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TStoredItem&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BitcoinCore_Store_2_Enumerate_Stream_System_UInt32_NBitcoin_BitcoinCore_DiskBlockPosRange_.md&amp;value=---%0Auid%3A%20NBitcoin.BitcoinCore.Store%602.Enumerate(Stream%2CSystem.UInt32%2CNBitcoin.BitcoinCore.DiskBlockPosRange)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BitcoinCore_Store_2_Enumerate_System_IO_Stream_System_UInt32_NBitcoin_BitcoinCore_DiskBlockPosRange_.md&amp;value=---%0Auid%3A%20NBitcoin.BitcoinCore.Store%602.Enumerate(System.IO.Stream%2CSystem.UInt32%2CNBitcoin.BitcoinCore.DiskBlockPosRange)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/BitcoinCore/Store.cs/#L118">View Source</a>
   </span>
   <a id="NBitcoin_BitcoinCore_Store_2_Enumerate_" data-uid="NBitcoin.BitcoinCore.Store`2.Enumerate*"></a>
-  <h4 id="NBitcoin_BitcoinCore_Store_2_Enumerate_Stream_System_UInt32_NBitcoin_BitcoinCore_DiskBlockPosRange_" data-uid="NBitcoin.BitcoinCore.Store`2.Enumerate(Stream,System.UInt32,NBitcoin.BitcoinCore.DiskBlockPosRange)">Enumerate(Stream, UInt32, DiskBlockPosRange)</h4>
+  <h4 id="NBitcoin_BitcoinCore_Store_2_Enumerate_System_IO_Stream_System_UInt32_NBitcoin_BitcoinCore_DiskBlockPosRange_" data-uid="NBitcoin.BitcoinCore.Store`2.Enumerate(System.IO.Stream,System.UInt32,NBitcoin.BitcoinCore.DiskBlockPosRange)">Enumerate(Stream, UInt32, DiskBlockPosRange)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TStoredItem&gt; Enumerate(Stream stream, uint fileIndex = null, DiskBlockPosRange range = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TStoredItem&gt; Enumerate(Stream stream, uint fileIndex = 0U, DiskBlockPosRange range = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -571,7 +597,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Stream</span></td>
+        <td><span class="xref">System.IO.Stream</span></td>
         <td><span class="parametername">stream</span></td>
         <td></td>
       </tr>
@@ -597,25 +623,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;TStoredItem&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TStoredItem&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BitcoinCore_Store_2_EnumerateFile_FileInfo_System_UInt32_NBitcoin_BitcoinCore_DiskBlockPosRange_.md&amp;value=---%0Auid%3A%20NBitcoin.BitcoinCore.Store%602.EnumerateFile(FileInfo%2CSystem.UInt32%2CNBitcoin.BitcoinCore.DiskBlockPosRange)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BitcoinCore_Store_2_EnumerateFile_System_IO_FileInfo_System_UInt32_NBitcoin_BitcoinCore_DiskBlockPosRange_.md&amp;value=---%0Auid%3A%20NBitcoin.BitcoinCore.Store%602.EnumerateFile(System.IO.FileInfo%2CSystem.UInt32%2CNBitcoin.BitcoinCore.DiskBlockPosRange)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/BitcoinCore/Store.cs/#L161">View Source</a>
   </span>
   <a id="NBitcoin_BitcoinCore_Store_2_EnumerateFile_" data-uid="NBitcoin.BitcoinCore.Store`2.EnumerateFile*"></a>
-  <h4 id="NBitcoin_BitcoinCore_Store_2_EnumerateFile_FileInfo_System_UInt32_NBitcoin_BitcoinCore_DiskBlockPosRange_" data-uid="NBitcoin.BitcoinCore.Store`2.EnumerateFile(FileInfo,System.UInt32,NBitcoin.BitcoinCore.DiskBlockPosRange)">EnumerateFile(FileInfo, UInt32, DiskBlockPosRange)</h4>
+  <h4 id="NBitcoin_BitcoinCore_Store_2_EnumerateFile_System_IO_FileInfo_System_UInt32_NBitcoin_BitcoinCore_DiskBlockPosRange_" data-uid="NBitcoin.BitcoinCore.Store`2.EnumerateFile(System.IO.FileInfo,System.UInt32,NBitcoin.BitcoinCore.DiskBlockPosRange)">EnumerateFile(FileInfo, UInt32, DiskBlockPosRange)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TStoredItem&gt; EnumerateFile(FileInfo file, uint fileIndex = null, DiskBlockPosRange range = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TStoredItem&gt; EnumerateFile(FileInfo file, uint fileIndex = 0U, DiskBlockPosRange range = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -628,7 +654,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">FileInfo</span></td>
+        <td><span class="xref">System.IO.FileInfo</span></td>
         <td><span class="parametername">file</span></td>
         <td></td>
       </tr>
@@ -654,7 +680,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;TStoredItem&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TStoredItem&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -672,7 +698,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TStoredItem&gt; EnumerateFile(string fileName, uint fileIndex = null, DiskBlockPosRange range = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TStoredItem&gt; EnumerateFile(string fileName, uint fileIndex = 0U, DiskBlockPosRange range = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -711,7 +737,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;TStoredItem&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TStoredItem&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -758,20 +784,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;TStoredItem&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TStoredItem&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BitcoinCore_Store_2_ReadStoredItem_Stream_NBitcoin_BitcoinCore_DiskBlockPos_.md&amp;value=---%0Auid%3A%20NBitcoin.BitcoinCore.Store%602.ReadStoredItem(Stream%2CNBitcoin.BitcoinCore.DiskBlockPos)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BitcoinCore_Store_2_ReadStoredItem_System_IO_Stream_NBitcoin_BitcoinCore_DiskBlockPos_.md&amp;value=---%0Auid%3A%20NBitcoin.BitcoinCore.Store%602.ReadStoredItem(System.IO.Stream%2CNBitcoin.BitcoinCore.DiskBlockPos)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/BitcoinCore/Store.cs/#L280">View Source</a>
   </span>
   <a id="NBitcoin_BitcoinCore_Store_2_ReadStoredItem_" data-uid="NBitcoin.BitcoinCore.Store`2.ReadStoredItem*"></a>
-  <h4 id="NBitcoin_BitcoinCore_Store_2_ReadStoredItem_Stream_NBitcoin_BitcoinCore_DiskBlockPos_" data-uid="NBitcoin.BitcoinCore.Store`2.ReadStoredItem(Stream,NBitcoin.BitcoinCore.DiskBlockPos)">ReadStoredItem(Stream, DiskBlockPos)</h4>
+  <h4 id="NBitcoin_BitcoinCore_Store_2_ReadStoredItem_System_IO_Stream_NBitcoin_BitcoinCore_DiskBlockPos_" data-uid="NBitcoin.BitcoinCore.Store`2.ReadStoredItem(System.IO.Stream,NBitcoin.BitcoinCore.DiskBlockPos)">ReadStoredItem(Stream, DiskBlockPos)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -789,7 +815,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Stream</span></td>
+        <td><span class="xref">System.IO.Stream</span></td>
         <td><span class="parametername">stream</span></td>
         <td></td>
       </tr>

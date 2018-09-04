@@ -75,6 +75,24 @@
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.html">NBitcoin</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
   <h5 id="NBitcoin_Sequence_syntax">Syntax</h5>
@@ -117,6 +135,38 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Sequence__ctor_System_TimeSpan_.md&amp;value=---%0Auid%3A%20NBitcoin.Sequence.%23ctor(System.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Sequence.cs/#L82">View Source</a>
+  </span>
+  <a id="NBitcoin_Sequence__ctor_" data-uid="NBitcoin.Sequence.#ctor*"></a>
+  <h4 id="NBitcoin_Sequence__ctor_System_TimeSpan_" data-uid="NBitcoin.Sequence.#ctor(System.TimeSpan)">Sequence(TimeSpan)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sequence(TimeSpan period)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">period</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Sequence__ctor_System_UInt32_.md&amp;value=---%0Auid%3A%20NBitcoin.Sequence.%23ctor(System.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -147,38 +197,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Sequence__ctor_TimeSpan_.md&amp;value=---%0Auid%3A%20NBitcoin.Sequence.%23ctor(TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Sequence.cs/#L82">View Source</a>
-  </span>
-  <a id="NBitcoin_Sequence__ctor_" data-uid="NBitcoin.Sequence.#ctor*"></a>
-  <h4 id="NBitcoin_Sequence__ctor_TimeSpan_" data-uid="NBitcoin.Sequence.#ctor(TimeSpan)">Sequence(TimeSpan)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Sequence(TimeSpan period)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TimeSpan</span></td>
-        <td><span class="parametername">period</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
@@ -195,7 +213,7 @@ disables nLockTime. */</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const uint SEQUENCE_FINAL = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const uint SEQUENCE_FINAL = 4294967295U</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,7 +249,7 @@ relative lock-time.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const uint SEQUENCE_LOCKTIME_DISABLE_FLAG = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const uint SEQUENCE_LOCKTIME_DISABLE_FLAG = 2147483648U</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,7 +280,7 @@ applied to extract that lock-time from the sequence field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const uint SEQUENCE_LOCKTIME_MASK = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const uint SEQUENCE_LOCKTIME_MASK = 65535U</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -294,7 +312,7 @@ otherwise it specifies blocks with a granularity of 1.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const uint SEQUENCE_LOCKTIME_TYPE_FLAG = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const uint SEQUENCE_LOCKTIME_TYPE_FLAG = 4194304U</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -458,7 +476,7 @@ otherwise it specifies blocks with a granularity of 1.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -555,6 +573,8 @@ otherwise it specifies blocks with a granularity of 1.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.ToString()</span></div>
   <h3 id="operators">Operators
   </h3>
   <span class="small pull-right mobile-hide">

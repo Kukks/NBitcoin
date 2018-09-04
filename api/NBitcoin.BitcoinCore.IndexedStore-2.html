@@ -82,11 +82,37 @@
       <div class="level2"><a class="xref" href="NBitcoin.BitcoinCore.IndexedBlockStore.html">IndexedBlockStore</a></div>
       <div class="level2"><a class="xref" href="NBitcoin.BitcoinCore.IndexedBlockUndoStore.html">IndexedBlockUndoStore</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.BitcoinCore.html">NBitcoin.BitcoinCore</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
   <h5 id="NBitcoin_BitcoinCore_IndexedStore_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class IndexedStore&lt;TStoredItem, TItem&gt; : object where TStoredItem : StoredItem&lt;TItem&gt; where TItem : IBitcoinSerializable, new()</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete]
+public abstract class IndexedStore&lt;TStoredItem, TItem&gt;
+    where TStoredItem : StoredItem&lt;TItem&gt; where TItem : IBitcoinSerializable, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,7 +309,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;TStoredItem&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TStoredItem&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -330,7 +356,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;TStoredItem&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TStoredItem&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -424,7 +450,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;TItem&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;TItem&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -563,7 +589,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

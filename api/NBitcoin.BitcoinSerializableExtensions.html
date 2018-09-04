@@ -80,11 +80,35 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">BitcoinSerializableExtensions</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.html">NBitcoin</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
   <h5 id="NBitcoin_BitcoinSerializableExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class BitcoinSerializableExtensions : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class BitcoinSerializableExtensions</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -101,7 +125,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T Clone&lt;T&gt;(this T serializable, uint? version = null)
+    <pre><code class="lang-csharp hljs">public static T Clone&lt;T&gt;(this T serializable, uint? version = default(uint? ))
     where T : IBitcoinSerializable, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -169,7 +193,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void FromBytes(this IBitcoinSerializable serializable, byte[] bytes, uint? version = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void FromBytes(this IBitcoinSerializable serializable, byte[] bytes, uint? version = default(uint? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,7 +287,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int GetSerializedSize(this IBitcoinSerializable serializable, uint? version = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int GetSerializedSize(this IBitcoinSerializable serializable, uint? version = default(uint? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -361,53 +385,6 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BitcoinSerializableExtensions_ReadWrite_NBitcoin_IBitcoinSerializable_Stream_System_Boolean_System_Nullable_System_UInt32__.md&amp;value=---%0Auid%3A%20NBitcoin.BitcoinSerializableExtensions.ReadWrite(NBitcoin.IBitcoinSerializable%2CStream%2CSystem.Boolean%2CSystem.Nullable%7BSystem.UInt32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/IBitcoinSerializable.cs/#L18">View Source</a>
-  </span>
-  <a id="NBitcoin_BitcoinSerializableExtensions_ReadWrite_" data-uid="NBitcoin.BitcoinSerializableExtensions.ReadWrite*"></a>
-  <h4 id="NBitcoin_BitcoinSerializableExtensions_ReadWrite_NBitcoin_IBitcoinSerializable_Stream_System_Boolean_System_Nullable_System_UInt32__" data-uid="NBitcoin.BitcoinSerializableExtensions.ReadWrite(NBitcoin.IBitcoinSerializable,Stream,System.Boolean,System.Nullable{System.UInt32})">ReadWrite(IBitcoinSerializable, Stream, Boolean, Nullable&lt;UInt32&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ReadWrite(this IBitcoinSerializable serializable, Stream stream, bool serializing, uint? version = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="NBitcoin.IBitcoinSerializable.html">IBitcoinSerializable</a></td>
-        <td><span class="parametername">serializable</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Stream</span></td>
-        <td><span class="parametername">stream</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">serializing</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt32</span>&gt;</td>
-        <td><span class="parametername">version</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BitcoinSerializableExtensions_ReadWrite_NBitcoin_IBitcoinSerializable_System_Byte___System_Nullable_System_UInt32__.md&amp;value=---%0Auid%3A%20NBitcoin.BitcoinSerializableExtensions.ReadWrite(NBitcoin.IBitcoinSerializable%2CSystem.Byte%5B%5D%2CSystem.Nullable%7BSystem.UInt32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -419,7 +396,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ReadWrite(this IBitcoinSerializable serializable, byte[] bytes, uint? version = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ReadWrite(this IBitcoinSerializable serializable, byte[] bytes, uint? version = default(uint? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -450,13 +427,60 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BitcoinSerializableExtensions_ToArrayEfficient_MemoryStream_.md&amp;value=---%0Auid%3A%20NBitcoin.BitcoinSerializableExtensions.ToArrayEfficient(MemoryStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BitcoinSerializableExtensions_ReadWrite_NBitcoin_IBitcoinSerializable_System_IO_Stream_System_Boolean_System_Nullable_System_UInt32__.md&amp;value=---%0Auid%3A%20NBitcoin.BitcoinSerializableExtensions.ReadWrite(NBitcoin.IBitcoinSerializable%2CSystem.IO.Stream%2CSystem.Boolean%2CSystem.Nullable%7BSystem.UInt32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/IBitcoinSerializable.cs/#L18">View Source</a>
+  </span>
+  <a id="NBitcoin_BitcoinSerializableExtensions_ReadWrite_" data-uid="NBitcoin.BitcoinSerializableExtensions.ReadWrite*"></a>
+  <h4 id="NBitcoin_BitcoinSerializableExtensions_ReadWrite_NBitcoin_IBitcoinSerializable_System_IO_Stream_System_Boolean_System_Nullable_System_UInt32__" data-uid="NBitcoin.BitcoinSerializableExtensions.ReadWrite(NBitcoin.IBitcoinSerializable,System.IO.Stream,System.Boolean,System.Nullable{System.UInt32})">ReadWrite(IBitcoinSerializable, Stream, Boolean, Nullable&lt;UInt32&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ReadWrite(this IBitcoinSerializable serializable, Stream stream, bool serializing, uint? version = default(uint? ))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NBitcoin.IBitcoinSerializable.html">IBitcoinSerializable</a></td>
+        <td><span class="parametername">serializable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">serializing</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt32</span>&gt;</td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BitcoinSerializableExtensions_ToArrayEfficient_System_IO_MemoryStream_.md&amp;value=---%0Auid%3A%20NBitcoin.BitcoinSerializableExtensions.ToArrayEfficient(System.IO.MemoryStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/IBitcoinSerializable.cs/#L74">View Source</a>
   </span>
   <a id="NBitcoin_BitcoinSerializableExtensions_ToArrayEfficient_" data-uid="NBitcoin.BitcoinSerializableExtensions.ToArrayEfficient*"></a>
-  <h4 id="NBitcoin_BitcoinSerializableExtensions_ToArrayEfficient_MemoryStream_" data-uid="NBitcoin.BitcoinSerializableExtensions.ToArrayEfficient(MemoryStream)">ToArrayEfficient(MemoryStream)</h4>
+  <h4 id="NBitcoin_BitcoinSerializableExtensions_ToArrayEfficient_System_IO_MemoryStream_" data-uid="NBitcoin.BitcoinSerializableExtensions.ToArrayEfficient(System.IO.MemoryStream)">ToArrayEfficient(MemoryStream)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -474,7 +498,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">MemoryStream</span></td>
+        <td><span class="xref">System.IO.MemoryStream</span></td>
         <td><span class="parametername">ms</span></td>
         <td></td>
       </tr>
@@ -508,7 +532,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static byte[] ToBytes(this IBitcoinSerializable serializable, uint? version = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static byte[] ToBytes(this IBitcoinSerializable serializable, uint? version = default(uint? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

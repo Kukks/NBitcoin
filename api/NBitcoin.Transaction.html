@@ -85,11 +85,32 @@
     <h5>Implements</h5>
     <div><a class="xref" href="NBitcoin.IBitcoinSerializable.html">IBitcoinSerializable</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.html">NBitcoin</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
   <h5 id="NBitcoin_Transaction_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Transaction : object, IBitcoinSerializable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Transaction : IBitcoinSerializable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -106,7 +127,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Transaction()</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;You should better use Transaction.Create(Network network)&quot;)]
+public Transaction()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
@@ -121,7 +143,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Transaction(byte[] bytes)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;You should instantiate Transaction from ConsensusFactory.CreateTransaction&quot;)]
+public Transaction(byte[] bytes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,7 +176,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Transaction(string hex, uint? version = null)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;You should instantiate Transaction from ConsensusFactory.CreateTransaction&quot;)]
+public Transaction(string hex, uint? version = default(uint? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -744,7 +768,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CacheHashes()</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Call PrecomputeHash(true, true) instead&quot;)]
+public void CacheHashes()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
@@ -763,7 +788,7 @@ locked inputs as they do not affect the calculation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SequenceLock CalculateSequenceLocks(int[] prevHeights, ChainedBlock block, Transaction.LockTimeFlags flags = default(Transaction.LockTimeFlags))</code></pre>
+    <pre><code class="lang-csharp hljs">public SequenceLock CalculateSequenceLocks(int[] prevHeights, ChainedBlock block, Transaction.LockTimeFlags flags = Transaction.LockTimeFlags.VerifySequence)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -860,7 +885,7 @@ locked inputs as they do not affect the calculation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CheckSequenceLocks(int[] prevHeights, ChainedBlock block, Transaction.LockTimeFlags flags = default(Transaction.LockTimeFlags))</code></pre>
+    <pre><code class="lang-csharp hljs">public bool CheckSequenceLocks(int[] prevHeights, ChainedBlock block, Transaction.LockTimeFlags flags = Transaction.LockTimeFlags.VerifySequence)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1347,7 +1372,7 @@ locked inputs as they do not affect the calculation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint256 GetSignatureHash(ICoin coin, SigHash sigHash = default(SigHash))</code></pre>
+    <pre><code class="lang-csharp hljs">public uint256 GetSignatureHash(ICoin coin, SigHash sigHash = SigHash.All)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1399,7 +1424,7 @@ locked inputs as they do not affect the calculation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint256 GetSignatureHash(Script scriptCode, int nIn, SigHash nHashType, Money amount = null, HashVersion sigversion = default(HashVersion))</code></pre>
+    <pre><code class="lang-csharp hljs">public uint256 GetSignatureHash(Script scriptCode, int nIn, SigHash nHashType, Money amount = null, HashVersion sigversion = HashVersion.Original)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1589,58 +1614,6 @@ locked inputs as they do not affect the calculation.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Transaction_IsFinal_DateTimeOffset_System_Int32_.md&amp;value=---%0Auid%3A%20NBitcoin.Transaction.IsFinal(DateTimeOffset%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Transaction.cs/#L1749">View Source</a>
-  </span>
-  <a id="NBitcoin_Transaction_IsFinal_" data-uid="NBitcoin.Transaction.IsFinal*"></a>
-  <h4 id="NBitcoin_Transaction_IsFinal_DateTimeOffset_System_Int32_" data-uid="NBitcoin.Transaction.IsFinal(DateTimeOffset,System.Int32)">IsFinal(DateTimeOffset, Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsFinal(DateTimeOffset blockTime, int blockHeight)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">DateTimeOffset</span></td>
-        <td><span class="parametername">blockTime</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">blockHeight</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Transaction_IsFinal_NBitcoin_ChainedBlock_.md&amp;value=---%0Auid%3A%20NBitcoin.Transaction.IsFinal(NBitcoin.ChainedBlock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -1688,6 +1661,58 @@ locked inputs as they do not affect the calculation.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Transaction_IsFinal_System_DateTimeOffset_System_Int32_.md&amp;value=---%0Auid%3A%20NBitcoin.Transaction.IsFinal(System.DateTimeOffset%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Transaction.cs/#L1749">View Source</a>
+  </span>
+  <a id="NBitcoin_Transaction_IsFinal_" data-uid="NBitcoin.Transaction.IsFinal*"></a>
+  <h4 id="NBitcoin_Transaction_IsFinal_System_DateTimeOffset_System_Int32_" data-uid="NBitcoin.Transaction.IsFinal(System.DateTimeOffset,System.Int32)">IsFinal(DateTimeOffset, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFinal(DateTimeOffset blockTime, int blockHeight)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">blockTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">blockHeight</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Transaction_Parse_System_String_.md&amp;value=---%0Auid%3A%20NBitcoin.Transaction.Parse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -1699,7 +1724,8 @@ locked inputs as they do not affect the calculation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Transaction Parse(string hex)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use Transaction.Parse(string hex, Network network)&quot;)]
+public static Transaction Parse(string hex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1798,7 +1824,8 @@ locked inputs as they do not affect the calculation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Transaction Parse(string tx, RawFormat format, Network network = null)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Do not parse JSON&quot;)]
+public static Transaction Parse(string tx, RawFormat format, Network network = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2010,7 +2037,8 @@ locked inputs as they do not affect the calculation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Sign(ISecret secret, bool assumeP2SH)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use Sign(ISecret,ICoin[]) instead)&quot;)]
+public void Sign(ISecret secret, bool assumeP2SH)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2209,7 +2237,8 @@ locked inputs as they do not affect the calculation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Sign(Key key, bool assumeP2SH)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use Sign(Key,ICoin[]) instead)&quot;)]
+public void Sign(Key key, bool assumeP2SH)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2326,7 +2355,7 @@ locked inputs as they do not affect the calculation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TransactionSignature SignInput(ISecret secret, ICoin coin, SigHash sigHash = default(SigHash))</code></pre>
+    <pre><code class="lang-csharp hljs">public TransactionSignature SignInput(ISecret secret, ICoin coin, SigHash sigHash = SigHash.All)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2383,7 +2412,7 @@ locked inputs as they do not affect the calculation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TransactionSignature SignInput(Key key, ICoin coin, SigHash sigHash = default(SigHash))</code></pre>
+    <pre><code class="lang-csharp hljs">public TransactionSignature SignInput(Key key, ICoin coin, SigHash sigHash = SigHash.All)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2487,6 +2516,8 @@ locked inputs as they do not affect the calculation.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Transaction_ToString_NBitcoin_RawFormat_NBitcoin_Network_.md&amp;value=---%0Auid%3A%20NBitcoin.Transaction.ToString(NBitcoin.RawFormat%2CNBitcoin.Network)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -2594,6 +2625,30 @@ locked inputs as they do not affect the calculation.</p>
       <a class="xref" href="NBitcoin.IBitcoinSerializable.html">IBitcoinSerializable</a>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_ReadWrite_NBitcoin_IBitcoinSerializable_System_IO_Stream_System_Boolean_System_Nullable_System_UInt32__">BitcoinSerializableExtensions.ReadWrite(IBitcoinSerializable, Stream, Boolean, Nullable&lt;UInt32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_GetSerializedSize_NBitcoin_IBitcoinSerializable_System_Nullable_System_UInt32__NBitcoin_SerializationType_">BitcoinSerializableExtensions.GetSerializedSize(IBitcoinSerializable, Nullable&lt;UInt32&gt;, SerializationType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_GetSerializedSize_NBitcoin_IBitcoinSerializable_NBitcoin_TransactionOptions_">BitcoinSerializableExtensions.GetSerializedSize(IBitcoinSerializable, TransactionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_GetSerializedSize_NBitcoin_IBitcoinSerializable_System_Nullable_System_UInt32__">BitcoinSerializableExtensions.GetSerializedSize(IBitcoinSerializable, Nullable&lt;UInt32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_ReadWrite_NBitcoin_IBitcoinSerializable_System_Byte___System_Nullable_System_UInt32__">BitcoinSerializableExtensions.ReadWrite(IBitcoinSerializable, Byte[], Nullable&lt;UInt32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_FromBytes_NBitcoin_IBitcoinSerializable_System_Byte___System_Nullable_System_UInt32__">BitcoinSerializableExtensions.FromBytes(IBitcoinSerializable, Byte[], Nullable&lt;UInt32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_Clone__1___0_System_Nullable_System_UInt32__">BitcoinSerializableExtensions.Clone&lt;T&gt;(T, Nullable&lt;UInt32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_ToBytes_NBitcoin_IBitcoinSerializable_System_Nullable_System_UInt32__">BitcoinSerializableExtensions.ToBytes(IBitcoinSerializable, Nullable&lt;UInt32&gt;)</a>
+  </div>
   <div>
       <a class="xref" href="NBitcoin.OpenAsset.Extensions.html#NBitcoin_OpenAsset_Extensions_GetColoredTransaction_NBitcoin_Transaction_NBitcoin_OpenAsset_IColoredTransactionRepository_">Extensions.GetColoredTransaction(Transaction, IColoredTransactionRepository)</a>
   </div>

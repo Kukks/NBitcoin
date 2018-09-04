@@ -101,11 +101,32 @@ of the block.</p>
     <h5>Implements</h5>
     <div><a class="xref" href="NBitcoin.IBitcoinSerializable.html">IBitcoinSerializable</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.html">NBitcoin</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
   <h5 id="NBitcoin_BlockHeader_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BlockHeader : object, IBitcoinSerializable</code></pre>
+    <pre><code class="lang-csharp hljs">public class BlockHeader : IBitcoinSerializable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -122,7 +143,8 @@ of the block.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BlockHeader()</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;You should instantiate BlockHeader from ConsensusFactory.CreateBlockHeader&quot;)]
+public BlockHeader()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
@@ -137,7 +159,8 @@ of the block.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BlockHeader(byte[] bytes)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use new BlockHeader(byte[] hex, Network|Consensus|ConsensusFactory) instead&quot;)]
+public BlockHeader(byte[] bytes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,7 +303,8 @@ of the block.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BlockHeader(string hex)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use new BlockHeader(string hex, Network|Consensus|ConsensusFactory) instead&quot;)]
+public BlockHeader(string hex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -643,7 +667,7 @@ of the block.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DateTimeOffset</span></td>
+        <td><span class="xref">System.DateTimeOffset</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -813,7 +837,8 @@ of the block.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CacheHashes()</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Call PrecomputeHash(true, true) instead&quot;)]
+public void CacheHashes()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
@@ -858,7 +883,8 @@ of the block.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CheckProofOfWork(Consensus consensus)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete]
+public bool CheckProofOfWork(Consensus consensus)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1099,7 +1125,8 @@ of the block.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static BlockHeader Parse(string hex)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use Parse(string hex, Network|Consensus|ConsensusFactory) instead&quot;)]
+public static BlockHeader Parse(string hex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1391,98 +1418,8 @@ of the block.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BlockHeader_UpdateTime_DateTimeOffset_NBitcoin_Consensus_NBitcoin_ChainedBlock_.md&amp;value=---%0Auid%3A%20NBitcoin.BlockHeader.UpdateTime(DateTimeOffset%2CNBitcoin.Consensus%2CNBitcoin.ChainedBlock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Block.cs/#L350">View Source</a>
-  </span>
-  <a id="NBitcoin_BlockHeader_UpdateTime_" data-uid="NBitcoin.BlockHeader.UpdateTime*"></a>
-  <h4 id="NBitcoin_BlockHeader_UpdateTime_DateTimeOffset_NBitcoin_Consensus_NBitcoin_ChainedBlock_" data-uid="NBitcoin.BlockHeader.UpdateTime(DateTimeOffset,NBitcoin.Consensus,NBitcoin.ChainedBlock)">UpdateTime(DateTimeOffset, Consensus, ChainedBlock)</h4>
-  <div class="markdown level1 summary"><p>Set time to consensus acceptable value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateTime(DateTimeOffset now, Consensus consensus, ChainedBlock prev)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">DateTimeOffset</span></td>
-        <td><span class="parametername">now</span></td>
-        <td><p>The expected date</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="NBitcoin.Consensus.html">Consensus</a></td>
-        <td><span class="parametername">consensus</span></td>
-        <td><p>Consensus</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="NBitcoin.ChainedBlock.html">ChainedBlock</a></td>
-        <td><span class="parametername">prev</span></td>
-        <td><p>previous block</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BlockHeader_UpdateTime_DateTimeOffset_NBitcoin_Network_NBitcoin_ChainedBlock_.md&amp;value=---%0Auid%3A%20NBitcoin.BlockHeader.UpdateTime(DateTimeOffset%2CNBitcoin.Network%2CNBitcoin.ChainedBlock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Block.cs/#L370">View Source</a>
-  </span>
-  <a id="NBitcoin_BlockHeader_UpdateTime_" data-uid="NBitcoin.BlockHeader.UpdateTime*"></a>
-  <h4 id="NBitcoin_BlockHeader_UpdateTime_DateTimeOffset_NBitcoin_Network_NBitcoin_ChainedBlock_" data-uid="NBitcoin.BlockHeader.UpdateTime(DateTimeOffset,NBitcoin.Network,NBitcoin.ChainedBlock)">UpdateTime(DateTimeOffset, Network, ChainedBlock)</h4>
-  <div class="markdown level1 summary"><p>Set time to consensus acceptable value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateTime(DateTimeOffset now, Network network, ChainedBlock prev)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">DateTimeOffset</span></td>
-        <td><span class="parametername">now</span></td>
-        <td><p>The expected date</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="NBitcoin.Network.html">Network</a></td>
-        <td><span class="parametername">network</span></td>
-        <td><p>Network</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="NBitcoin.ChainedBlock.html">ChainedBlock</a></td>
-        <td><span class="parametername">prev</span></td>
-        <td><p>previous block</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BlockHeader_UpdateTime_NBitcoin_Consensus_NBitcoin_ChainedBlock_.md&amp;value=---%0Auid%3A%20NBitcoin.BlockHeader.UpdateTime(NBitcoin.Consensus%2CNBitcoin.ChainedBlock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -1563,9 +1500,126 @@ of the block.</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BlockHeader_UpdateTime_System_DateTimeOffset_NBitcoin_Consensus_NBitcoin_ChainedBlock_.md&amp;value=---%0Auid%3A%20NBitcoin.BlockHeader.UpdateTime(System.DateTimeOffset%2CNBitcoin.Consensus%2CNBitcoin.ChainedBlock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Block.cs/#L350">View Source</a>
+  </span>
+  <a id="NBitcoin_BlockHeader_UpdateTime_" data-uid="NBitcoin.BlockHeader.UpdateTime*"></a>
+  <h4 id="NBitcoin_BlockHeader_UpdateTime_System_DateTimeOffset_NBitcoin_Consensus_NBitcoin_ChainedBlock_" data-uid="NBitcoin.BlockHeader.UpdateTime(System.DateTimeOffset,NBitcoin.Consensus,NBitcoin.ChainedBlock)">UpdateTime(DateTimeOffset, Consensus, ChainedBlock)</h4>
+  <div class="markdown level1 summary"><p>Set time to consensus acceptable value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateTime(DateTimeOffset now, Consensus consensus, ChainedBlock prev)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">now</span></td>
+        <td><p>The expected date</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NBitcoin.Consensus.html">Consensus</a></td>
+        <td><span class="parametername">consensus</span></td>
+        <td><p>Consensus</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NBitcoin.ChainedBlock.html">ChainedBlock</a></td>
+        <td><span class="parametername">prev</span></td>
+        <td><p>previous block</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_BlockHeader_UpdateTime_System_DateTimeOffset_NBitcoin_Network_NBitcoin_ChainedBlock_.md&amp;value=---%0Auid%3A%20NBitcoin.BlockHeader.UpdateTime(System.DateTimeOffset%2CNBitcoin.Network%2CNBitcoin.ChainedBlock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Block.cs/#L370">View Source</a>
+  </span>
+  <a id="NBitcoin_BlockHeader_UpdateTime_" data-uid="NBitcoin.BlockHeader.UpdateTime*"></a>
+  <h4 id="NBitcoin_BlockHeader_UpdateTime_System_DateTimeOffset_NBitcoin_Network_NBitcoin_ChainedBlock_" data-uid="NBitcoin.BlockHeader.UpdateTime(System.DateTimeOffset,NBitcoin.Network,NBitcoin.ChainedBlock)">UpdateTime(DateTimeOffset, Network, ChainedBlock)</h4>
+  <div class="markdown level1 summary"><p>Set time to consensus acceptable value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateTime(DateTimeOffset now, Network network, ChainedBlock prev)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">now</span></td>
+        <td><p>The expected date</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NBitcoin.Network.html">Network</a></td>
+        <td><span class="parametername">network</span></td>
+        <td><p>Network</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NBitcoin.ChainedBlock.html">ChainedBlock</a></td>
+        <td><span class="parametername">prev</span></td>
+        <td><p>previous block</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="NBitcoin.IBitcoinSerializable.html">IBitcoinSerializable</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_ReadWrite_NBitcoin_IBitcoinSerializable_System_IO_Stream_System_Boolean_System_Nullable_System_UInt32__">BitcoinSerializableExtensions.ReadWrite(IBitcoinSerializable, Stream, Boolean, Nullable&lt;UInt32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_GetSerializedSize_NBitcoin_IBitcoinSerializable_System_Nullable_System_UInt32__NBitcoin_SerializationType_">BitcoinSerializableExtensions.GetSerializedSize(IBitcoinSerializable, Nullable&lt;UInt32&gt;, SerializationType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_GetSerializedSize_NBitcoin_IBitcoinSerializable_NBitcoin_TransactionOptions_">BitcoinSerializableExtensions.GetSerializedSize(IBitcoinSerializable, TransactionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_GetSerializedSize_NBitcoin_IBitcoinSerializable_System_Nullable_System_UInt32__">BitcoinSerializableExtensions.GetSerializedSize(IBitcoinSerializable, Nullable&lt;UInt32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_ReadWrite_NBitcoin_IBitcoinSerializable_System_Byte___System_Nullable_System_UInt32__">BitcoinSerializableExtensions.ReadWrite(IBitcoinSerializable, Byte[], Nullable&lt;UInt32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_FromBytes_NBitcoin_IBitcoinSerializable_System_Byte___System_Nullable_System_UInt32__">BitcoinSerializableExtensions.FromBytes(IBitcoinSerializable, Byte[], Nullable&lt;UInt32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_Clone__1___0_System_Nullable_System_UInt32__">BitcoinSerializableExtensions.Clone&lt;T&gt;(T, Nullable&lt;UInt32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.BitcoinSerializableExtensions.html#NBitcoin_BitcoinSerializableExtensions_ToBytes_NBitcoin_IBitcoinSerializable_System_Nullable_System_UInt32__">BitcoinSerializableExtensions.ToBytes(IBitcoinSerializable, Nullable&lt;UInt32&gt;)</a>
   </div>
 </article>
           </div>

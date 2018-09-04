@@ -79,13 +79,131 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Pbkdf2</span></div>
+    <div class="level1"><span class="xref">System.MarshalByRefObject</span></div>
+    <div class="level2"><span class="xref">System.IO.Stream</span></div>
+    <div class="level3"><span class="xref">Pbkdf2</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.IO.Stream.Null</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.BeginRead(System.Byte[], System.Int32, System.Int32, System.AsyncCallback, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.BeginWrite(System.Byte[], System.Int32, System.Int32, System.AsyncCallback, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.Close()</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.CopyTo(System.IO.Stream)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.CopyTo(System.IO.Stream, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.CopyToAsync(System.IO.Stream)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.CopyToAsync(System.IO.Stream, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.CopyToAsync(System.IO.Stream, System.Int32, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.CreateWaitHandle()</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.EndRead(System.IAsyncResult)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.EndWrite(System.IAsyncResult)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.FlushAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.FlushAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.ObjectInvariant()</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.ReadAsync(System.Byte[], System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.ReadAsync(System.Byte[], System.Int32, System.Int32, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.ReadByte()</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.Synchronized(System.IO.Stream)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.WriteAsync(System.Byte[], System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.WriteAsync(System.Byte[], System.Int32, System.Int32, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.WriteByte(System.Byte)</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.CanTimeout</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.ReadTimeout</span>
+    </div>
+    <div>
+      <span class="xref">System.IO.Stream.WriteTimeout</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.GetLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.InitializeLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.MemberwiseClone(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.Crypto.html">NBitcoin.Crypto</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
   <h5 id="NBitcoin_Crypto_Pbkdf2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Pbkdf2 : Stream</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This might disappear in favour of .NET BCL's Rfc2898DeriveBytes class&quot;)]
+public class Pbkdf2 : Stream, IDisposable</code></pre>
   </div>
   <h5 id="NBitcoin_Crypto_Pbkdf2_examples"><strong>Examples</strong></h5>
   <pre><code>using System.Security.Cryptography;
@@ -132,6 +250,8 @@ Stream derivedKeyStream = new Pbkdf2(new HMACSHA512(key), salt, 1000);</code></p
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.Stream.CanRead</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Crypto_Pbkdf2_CanSeek.md&amp;value=---%0Auid%3A%20NBitcoin.Crypto.Pbkdf2.CanSeek%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -162,6 +282,8 @@ Stream derivedKeyStream = new Pbkdf2(new HMACSHA512(key), salt, 1000);</code></p
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.Stream.CanSeek</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Crypto_Pbkdf2_CanWrite.md&amp;value=---%0Auid%3A%20NBitcoin.Crypto.Pbkdf2.CanWrite%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -192,6 +314,8 @@ Stream derivedKeyStream = new Pbkdf2(new HMACSHA512(key), salt, 1000);</code></p
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.Stream.CanWrite</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Crypto_Pbkdf2_Length.md&amp;value=---%0Auid%3A%20NBitcoin.Crypto.Pbkdf2.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -223,6 +347,8 @@ Stream derivedKeyStream = new Pbkdf2(new HMACSHA512(key), salt, 1000);</code></p
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.Stream.Length</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Crypto_Pbkdf2_Position.md&amp;value=---%0Auid%3A%20NBitcoin.Crypto.Pbkdf2.Position%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -254,6 +380,8 @@ Stream derivedKeyStream = new Pbkdf2(new HMACSHA512(key), salt, 1000);</code></p
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.Stream.Position</span></div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -289,6 +417,8 @@ Stream derivedKeyStream = new Pbkdf2(new HMACSHA512(key), salt, 1000);</code></p
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.Stream.Dispose(System.Boolean)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Crypto_Pbkdf2_Flush.md&amp;value=---%0Auid%3A%20NBitcoin.Crypto.Pbkdf2.Flush%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -304,6 +434,8 @@ Stream derivedKeyStream = new Pbkdf2(new HMACSHA512(key), salt, 1000);</code></p
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override void Flush()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.Stream.Flush()</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Crypto_Pbkdf2_Read_System_Byte___System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20NBitcoin.Crypto.Pbkdf2.Read(System.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -361,6 +493,8 @@ Stream derivedKeyStream = new Pbkdf2(new HMACSHA512(key), salt, 1000);</code></p
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.Stream.Read(System.Byte[], System.Int32, System.Int32)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Crypto_Pbkdf2_Read_System_Int32_.md&amp;value=---%0Auid%3A%20NBitcoin.Crypto.Pbkdf2.Read(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -413,13 +547,13 @@ Stream derivedKeyStream = new Pbkdf2(new HMACSHA512(key), salt, 1000);</code></p
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Crypto_Pbkdf2_Seek_System_Int64_SeekOrigin_.md&amp;value=---%0Auid%3A%20NBitcoin.Crypto.Pbkdf2.Seek(System.Int64%2CSeekOrigin)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Crypto_Pbkdf2_Seek_System_Int64_System_IO_SeekOrigin_.md&amp;value=---%0Auid%3A%20NBitcoin.Crypto.Pbkdf2.Seek(System.Int64%2CSystem.IO.SeekOrigin)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Crypto/Cryptsharp/Pbkdf2.cs/#L267">View Source</a>
   </span>
   <a id="NBitcoin_Crypto_Pbkdf2_Seek_" data-uid="NBitcoin.Crypto.Pbkdf2.Seek*"></a>
-  <h4 id="NBitcoin_Crypto_Pbkdf2_Seek_System_Int64_SeekOrigin_" data-uid="NBitcoin.Crypto.Pbkdf2.Seek(System.Int64,SeekOrigin)">Seek(Int64, SeekOrigin)</h4>
+  <h4 id="NBitcoin_Crypto_Pbkdf2_Seek_System_Int64_System_IO_SeekOrigin_" data-uid="NBitcoin.Crypto.Pbkdf2.Seek(System.Int64,System.IO.SeekOrigin)">Seek(Int64, SeekOrigin)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -442,7 +576,7 @@ Stream derivedKeyStream = new Pbkdf2(new HMACSHA512(key), salt, 1000);</code></p
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">SeekOrigin</span></td>
+        <td><span class="xref">System.IO.SeekOrigin</span></td>
         <td><span class="parametername">origin</span></td>
         <td></td>
       </tr>
@@ -463,6 +597,8 @@ Stream derivedKeyStream = new Pbkdf2(new HMACSHA512(key), salt, 1000);</code></p
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.Stream.Seek(System.Int64, System.IO.SeekOrigin)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Crypto_Pbkdf2_SetLength_System_Int64_.md&amp;value=---%0Auid%3A%20NBitcoin.Crypto.Pbkdf2.SetLength(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -495,6 +631,8 @@ Stream derivedKeyStream = new Pbkdf2(new HMACSHA512(key), salt, 1000);</code></p
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.Stream.SetLength(System.Int64)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Crypto_Pbkdf2_Write_System_Byte___System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20NBitcoin.Crypto.Pbkdf2.Write(System.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -537,6 +675,28 @@ Stream derivedKeyStream = new Pbkdf2(new HMACSHA512(key), salt, 1000);</code></p
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.IO.Stream.Write(System.Byte[], System.Int32, System.Int32)</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NBitcoin.Extensions.html#NBitcoin_Extensions_ReadBytes_System_IO_Stream_System_Int32_">Extensions.ReadBytes(Stream, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.Extensions.html#NBitcoin_Extensions_ReadBytes_System_IO_Stream_System_Int32_System_Byte___">Extensions.ReadBytes(Stream, Int32, Byte[])</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.Extensions.html#NBitcoin_Extensions_ReadBytesAsync_System_IO_Stream_System_Int32_">Extensions.ReadBytesAsync(Stream, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.Extensions.html#NBitcoin_Extensions_ReadBytes_System_IO_Stream_System_Int32_System_Byte____">Extensions.ReadBytes(Stream, Int32, out Byte[])</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.Extensions.html#NBitcoin_Extensions_ReadEx_System_IO_Stream_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_">Extensions.ReadEx(Stream, Byte[], Int32, Int32, CancellationToken)</a>
+  </div>
 </article>
           </div>
           

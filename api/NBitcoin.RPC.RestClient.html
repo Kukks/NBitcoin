@@ -85,23 +85,47 @@
     <h5>Implements</h5>
     <div><a class="xref" href="NBitcoin.IBlockRepository.html">IBlockRepository</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.RPC.html">NBitcoin.RPC</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
   <h5 id="NBitcoin_RPC_RestClient_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RestClient : object, IBlockRepository</code></pre>
+    <pre><code class="lang-csharp hljs">public class RestClient : IBlockRepository</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_RPC_RestClient__ctor_Uri_.md&amp;value=---%0Auid%3A%20NBitcoin.RPC.RestClient.%23ctor(Uri)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_RPC_RestClient__ctor_System_Uri_.md&amp;value=---%0Auid%3A%20NBitcoin.RPC.RestClient.%23ctor(System.Uri)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/RPC/RestClient.cs/#L51">View Source</a>
   </span>
   <a id="NBitcoin_RPC_RestClient__ctor_" data-uid="NBitcoin.RPC.RestClient.#ctor*"></a>
-  <h4 id="NBitcoin_RPC_RestClient__ctor_Uri_" data-uid="NBitcoin.RPC.RestClient.#ctor(Uri)">RestClient(Uri)</h4>
+  <h4 id="NBitcoin_RPC_RestClient__ctor_System_Uri_" data-uid="NBitcoin.RPC.RestClient.#ctor(System.Uri)">RestClient(Uri)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="NBitcoin.RPC.RestClient.html">RestClient</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -120,22 +144,43 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Uri</span></td>
+        <td><span class="xref">System.Uri</span></td>
         <td><span class="parametername">address</span></td>
         <td><p>The rest API endpoint</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>Null rest API endpoint</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>Invalid value for RestResponseFormat</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_RPC_RestClient__ctor_Uri_NBitcoin_Network_.md&amp;value=---%0Auid%3A%20NBitcoin.RPC.RestClient.%23ctor(Uri%2CNBitcoin.Network)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_RPC_RestClient__ctor_System_Uri_NBitcoin_Network_.md&amp;value=---%0Auid%3A%20NBitcoin.RPC.RestClient.%23ctor(System.Uri%2CNBitcoin.Network)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/RPC/RestClient.cs/#L63">View Source</a>
   </span>
   <a id="NBitcoin_RPC_RestClient__ctor_" data-uid="NBitcoin.RPC.RestClient.#ctor*"></a>
-  <h4 id="NBitcoin_RPC_RestClient__ctor_Uri_NBitcoin_Network_" data-uid="NBitcoin.RPC.RestClient.#ctor(Uri,NBitcoin.Network)">RestClient(Uri, Network)</h4>
+  <h4 id="NBitcoin_RPC_RestClient__ctor_System_Uri_NBitcoin_Network_" data-uid="NBitcoin.RPC.RestClient.#ctor(System.Uri,NBitcoin.Network)">RestClient(Uri, Network)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="NBitcoin.RPC.RestClient.html">RestClient</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -154,7 +199,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Uri</span></td>
+        <td><span class="xref">System.Uri</span></td>
         <td><span class="parametername">address</span></td>
         <td><p>The rest API endpoint</p>
 </td>
@@ -163,6 +208,27 @@
         <td><a class="xref" href="NBitcoin.Network.html">Network</a></td>
         <td><span class="parametername">network</span></td>
         <td><p>The network to operate with</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>Null rest API endpoint</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>Invalid value for RestResponseFormat</p>
 </td>
       </tr>
     </tbody>
@@ -252,6 +318,22 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>blockId cannot be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_RPC_RestClient_GetBlockAsync_NBitcoin_uint256_.md&amp;value=---%0Auid%3A%20NBitcoin.RPC.RestClient.GetBlockAsync(NBitcoin.uint256)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -296,8 +378,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="NBitcoin.Block.html">Block</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="NBitcoin.Block.html">Block</a>&gt;</td>
         <td><p>Given a block hash (id) returns the requested block object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>blockId cannot be null.</p>
 </td>
       </tr>
     </tbody>
@@ -352,8 +450,29 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="NBitcoin.BlockHeader.html">BlockHeader</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NBitcoin.BlockHeader.html">BlockHeader</a>&gt;</td>
         <td><p>Given a block hash (blockId) returns as much block headers as specified.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>blockId cannot be null</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>count must be greater or equal to one.</p>
 </td>
       </tr>
     </tbody>
@@ -408,8 +527,29 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<a class="xref" href="NBitcoin.BlockHeader.html">BlockHeader</a>&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NBitcoin.BlockHeader.html">BlockHeader</a>&gt;&gt;</td>
         <td><p>Given a block hash (blockId) returns as much block headers as specified.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>blockId cannot be null</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>count must be greater or equal to one.</p>
 </td>
       </tr>
     </tbody>
@@ -440,7 +580,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="NBitcoin.RPC.ChainInfo.html">ChainInfo</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="NBitcoin.RPC.ChainInfo.html">ChainInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -495,6 +635,22 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>txId cannot be null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_RPC_RestClient_GetTransactionAsync_NBitcoin_uint256_.md&amp;value=---%0Auid%3A%20NBitcoin.RPC.RestClient.GetTransactionAsync(NBitcoin.uint256)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -539,21 +695,37 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="NBitcoin.Transaction.html">Transaction</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="NBitcoin.Transaction.html">Transaction</a>&gt;</td>
         <td><p>Given a transaction hash (id) returns the requested transaction object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>txId cannot be null</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_RPC_RestClient_GetUnspentOutputsAsync_IEnumerable_NBitcoin_OutPoint__System_Boolean_.md&amp;value=---%0Auid%3A%20NBitcoin.RPC.RestClient.GetUnspentOutputsAsync(IEnumerable%7BNBitcoin.OutPoint%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_RPC_RestClient_GetUnspentOutputsAsync_System_Collections_Generic_IEnumerable_NBitcoin_OutPoint__System_Boolean_.md&amp;value=---%0Auid%3A%20NBitcoin.RPC.RestClient.GetUnspentOutputsAsync(System.Collections.Generic.IEnumerable%7BNBitcoin.OutPoint%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/RPC/RestClient.cs/#L189">View Source</a>
   </span>
   <a id="NBitcoin_RPC_RestClient_GetUnspentOutputsAsync_" data-uid="NBitcoin.RPC.RestClient.GetUnspentOutputsAsync*"></a>
-  <h4 id="NBitcoin_RPC_RestClient_GetUnspentOutputsAsync_IEnumerable_NBitcoin_OutPoint__System_Boolean_" data-uid="NBitcoin.RPC.RestClient.GetUnspentOutputsAsync(IEnumerable{NBitcoin.OutPoint},System.Boolean)">GetUnspentOutputsAsync(IEnumerable&lt;OutPoint&gt;, Boolean)</h4>
+  <h4 id="NBitcoin_RPC_RestClient_GetUnspentOutputsAsync_System_Collections_Generic_IEnumerable_NBitcoin_OutPoint__System_Boolean_" data-uid="NBitcoin.RPC.RestClient.GetUnspentOutputsAsync(System.Collections.Generic.IEnumerable{NBitcoin.OutPoint},System.Boolean)">GetUnspentOutputsAsync(IEnumerable&lt;OutPoint&gt;, Boolean)</h4>
   <div class="markdown level1 summary"><p>Gets unspect outputs.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -572,7 +744,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="NBitcoin.OutPoint.html">OutPoint</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NBitcoin.OutPoint.html">OutPoint</a>&gt;</td>
         <td><span class="parametername">outPoints</span></td>
         <td><p>The out points identifiers (TxIn-N).</p>
 </td>
@@ -595,8 +767,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="NBitcoin.Protocol.Payloads.UTxOutputs.html">UTxOutputs</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="NBitcoin.Protocol.Payloads.UTxOutputs.html">UTxOutputs</a>&gt;</td>
         <td><p>The unspent transaction outputs (UTXO) for the given outPoints.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>outPoints cannot be null.</p>
 </td>
       </tr>
     </tbody>
@@ -653,7 +841,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Byte</span>[]&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Byte</span>[]&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -661,6 +849,10 @@
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="NBitcoin.IBlockRepository.html">IBlockRepository</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NBitcoin.Extensions.html#NBitcoin_Extensions_GetBlock_NBitcoin_IBlockRepository_NBitcoin_uint256_">Extensions.GetBlock(IBlockRepository, uint256)</a>
   </div>
 </article>
           </div>

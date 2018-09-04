@@ -98,6 +98,27 @@
     <div>
       <a class="xref" href="NBitcoin.NetworkStringParser.html#NBitcoin_NetworkStringParser_CreateP2WSH_NBitcoin_WitScriptId_NBitcoin_Network_">NetworkStringParser.CreateP2WSH(WitScriptId, Network)</a>
     </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.Altcoins.html">NBitcoin.Altcoins</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.Altcoins.dll</h6>
@@ -120,7 +141,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool TryParse&lt;T&gt;(string str, Network network, out T result)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool TryParse&lt;T&gt;(string str, Network network, out T result)
+    where T : IBitcoinString</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,6 +201,8 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">NBitcoin.NetworkStringParser.TryParse&lt;T&gt;(System.String, NBitcoin.Network, T)</span></div>
 </article>
           </div>
           

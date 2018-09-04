@@ -118,7 +118,7 @@
       <a class="xref" href="NBitcoin.ChainBase.html#NBitcoin_ChainBase_FindFork_NBitcoin_ChainBase_">ChainBase.FindFork(ChainBase)</a>
     </div>
     <div>
-      <a class="xref" href="NBitcoin.ChainBase.html#NBitcoin_ChainBase_FindFork_IEnumerable_NBitcoin_uint256__">ChainBase.FindFork(IEnumerable&lt;uint256&gt;)</a>
+      <a class="xref" href="NBitcoin.ChainBase.html#NBitcoin_ChainBase_FindFork_System_Collections_Generic_IEnumerable_NBitcoin_uint256__">ChainBase.FindFork(IEnumerable&lt;uint256&gt;)</a>
     </div>
     <div>
       <a class="xref" href="NBitcoin.ChainBase.html#NBitcoin_ChainBase_FindFork_NBitcoin_BlockLocator_">ChainBase.FindFork(BlockLocator)</a>
@@ -134,6 +134,24 @@
     </div>
     <div>
       <a class="xref" href="NBitcoin.ChainBase.html#NBitcoin_ChainBase_EnumerateAfter_NBitcoin_ChainedBlock_">ChainBase.EnumerateAfter(ChainedBlock)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.html">NBitcoin</a></h6>
@@ -236,7 +254,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConcurrentChain(byte[] bytes)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use ConcurrentChain(byte[], ConsensusFactory|Network|Consensus) instead&quot;)]
+public ConcurrentChain(byte[] bytes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -268,7 +287,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConcurrentChain(byte[] bytes, ConcurrentChain.ChainSerializationFormat format)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use ConcurrentChain(byte[], ConsensusFactory|Network|Consensus, ChainSerializationFormat format) instead&quot;)]
+public ConcurrentChain(byte[] bytes, ConcurrentChain.ChainSerializationFormat format)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -652,7 +672,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="NBitcoin.ChainedBlock.html">ChainedBlock</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NBitcoin.ChainedBlock.html">ChainedBlock</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -828,201 +848,6 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_Load_Stream_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.Load(Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/ConcurrentChain.cs/#L164">View Source</a>
-  </span>
-  <a id="NBitcoin_ConcurrentChain_Load_" data-uid="NBitcoin.ConcurrentChain.Load*"></a>
-  <h4 id="NBitcoin_ConcurrentChain_Load_Stream_" data-uid="NBitcoin.ConcurrentChain.Load(Stream)">Load(Stream)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Load(Stream stream)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Stream</span></td>
-        <td><span class="parametername">stream</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_Load_Stream_NBitcoin_ConcurrentChain_ChainSerializationFormat_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.Load(Stream%2CNBitcoin.ConcurrentChain.ChainSerializationFormat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/ConcurrentChain.cs/#L159">View Source</a>
-  </span>
-  <a id="NBitcoin_ConcurrentChain_Load_" data-uid="NBitcoin.ConcurrentChain.Load*"></a>
-  <h4 id="NBitcoin_ConcurrentChain_Load_Stream_NBitcoin_ConcurrentChain_ChainSerializationFormat_" data-uid="NBitcoin.ConcurrentChain.Load(Stream,NBitcoin.ConcurrentChain.ChainSerializationFormat)">Load(Stream, ConcurrentChain.ChainSerializationFormat)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Load(Stream stream, ConcurrentChain.ChainSerializationFormat format)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Stream</span></td>
-        <td><span class="parametername">stream</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="NBitcoin.ConcurrentChain.ChainSerializationFormat.html">ConcurrentChain.ChainSerializationFormat</a></td>
-        <td><span class="parametername">format</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_Load_Stream_NBitcoin_Consensus_NBitcoin_ConcurrentChain_ChainSerializationFormat_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.Load(Stream%2CNBitcoin.Consensus%2CNBitcoin.ConcurrentChain.ChainSerializationFormat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/ConcurrentChain.cs/#L152">View Source</a>
-  </span>
-  <a id="NBitcoin_ConcurrentChain_Load_" data-uid="NBitcoin.ConcurrentChain.Load*"></a>
-  <h4 id="NBitcoin_ConcurrentChain_Load_Stream_NBitcoin_Consensus_NBitcoin_ConcurrentChain_ChainSerializationFormat_" data-uid="NBitcoin.ConcurrentChain.Load(Stream,NBitcoin.Consensus,NBitcoin.ConcurrentChain.ChainSerializationFormat)">Load(Stream, Consensus, ConcurrentChain.ChainSerializationFormat)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Load(Stream stream, Consensus consensus, ConcurrentChain.ChainSerializationFormat format)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Stream</span></td>
-        <td><span class="parametername">stream</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="NBitcoin.Consensus.html">Consensus</a></td>
-        <td><span class="parametername">consensus</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="NBitcoin.ConcurrentChain.ChainSerializationFormat.html">ConcurrentChain.ChainSerializationFormat</a></td>
-        <td><span class="parametername">format</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_Load_Stream_NBitcoin_ConsensusFactory_NBitcoin_ConcurrentChain_ChainSerializationFormat_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.Load(Stream%2CNBitcoin.ConsensusFactory%2CNBitcoin.ConcurrentChain.ChainSerializationFormat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/ConcurrentChain.cs/#L138">View Source</a>
-  </span>
-  <a id="NBitcoin_ConcurrentChain_Load_" data-uid="NBitcoin.ConcurrentChain.Load*"></a>
-  <h4 id="NBitcoin_ConcurrentChain_Load_Stream_NBitcoin_ConsensusFactory_NBitcoin_ConcurrentChain_ChainSerializationFormat_" data-uid="NBitcoin.ConcurrentChain.Load(Stream,NBitcoin.ConsensusFactory,NBitcoin.ConcurrentChain.ChainSerializationFormat)">Load(Stream, ConsensusFactory, ConcurrentChain.ChainSerializationFormat)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Load(Stream stream, ConsensusFactory consensusFactory, ConcurrentChain.ChainSerializationFormat format)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Stream</span></td>
-        <td><span class="parametername">stream</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="NBitcoin.ConsensusFactory.html">ConsensusFactory</a></td>
-        <td><span class="parametername">consensusFactory</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="NBitcoin.ConcurrentChain.ChainSerializationFormat.html">ConcurrentChain.ChainSerializationFormat</a></td>
-        <td><span class="parametername">format</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_Load_Stream_NBitcoin_Network_NBitcoin_ConcurrentChain_ChainSerializationFormat_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.Load(Stream%2CNBitcoin.Network%2CNBitcoin.ConcurrentChain.ChainSerializationFormat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/ConcurrentChain.cs/#L145">View Source</a>
-  </span>
-  <a id="NBitcoin_ConcurrentChain_Load_" data-uid="NBitcoin.ConcurrentChain.Load*"></a>
-  <h4 id="NBitcoin_ConcurrentChain_Load_Stream_NBitcoin_Network_NBitcoin_ConcurrentChain_ChainSerializationFormat_" data-uid="NBitcoin.ConcurrentChain.Load(Stream,NBitcoin.Network,NBitcoin.ConcurrentChain.ChainSerializationFormat)">Load(Stream, Network, ConcurrentChain.ChainSerializationFormat)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Load(Stream stream, Network network, ConcurrentChain.ChainSerializationFormat format)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Stream</span></td>
-        <td><span class="parametername">stream</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="NBitcoin.Network.html">Network</a></td>
-        <td><span class="parametername">network</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="NBitcoin.ConcurrentChain.ChainSerializationFormat.html">ConcurrentChain.ChainSerializationFormat</a></td>
-        <td><span class="parametername">format</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_Load_System_Byte___.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.Load(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -1034,7 +859,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Load(byte[] chain)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use Load(byte[], ConsensusFactory|Network|Consensus) instead&quot;)]
+public void Load(byte[] chain)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1066,7 +892,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Load(byte[] chain, ConcurrentChain.ChainSerializationFormat format)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use Load(byte[], ConsensusFactory|Network|Consensus, ChainSerializationFormat format) instead&quot;)]
+public void Load(byte[] chain, ConcurrentChain.ChainSerializationFormat format)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1329,6 +1156,202 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_Load_System_IO_Stream_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.Load(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/ConcurrentChain.cs/#L164">View Source</a>
+  </span>
+  <a id="NBitcoin_ConcurrentChain_Load_" data-uid="NBitcoin.ConcurrentChain.Load*"></a>
+  <h4 id="NBitcoin_ConcurrentChain_Load_System_IO_Stream_" data-uid="NBitcoin.ConcurrentChain.Load(System.IO.Stream)">Load(Stream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Load(Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_Load_System_IO_Stream_NBitcoin_ConcurrentChain_ChainSerializationFormat_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.Load(System.IO.Stream%2CNBitcoin.ConcurrentChain.ChainSerializationFormat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/ConcurrentChain.cs/#L159">View Source</a>
+  </span>
+  <a id="NBitcoin_ConcurrentChain_Load_" data-uid="NBitcoin.ConcurrentChain.Load*"></a>
+  <h4 id="NBitcoin_ConcurrentChain_Load_System_IO_Stream_NBitcoin_ConcurrentChain_ChainSerializationFormat_" data-uid="NBitcoin.ConcurrentChain.Load(System.IO.Stream,NBitcoin.ConcurrentChain.ChainSerializationFormat)">Load(Stream, ConcurrentChain.ChainSerializationFormat)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use Load(Stream, ConsensusFactory|Network|Consensus, ChainSerializationFormat) instead&quot;)]
+public void Load(Stream stream, ConcurrentChain.ChainSerializationFormat format)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NBitcoin.ConcurrentChain.ChainSerializationFormat.html">ConcurrentChain.ChainSerializationFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_Load_System_IO_Stream_NBitcoin_Consensus_NBitcoin_ConcurrentChain_ChainSerializationFormat_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.Load(System.IO.Stream%2CNBitcoin.Consensus%2CNBitcoin.ConcurrentChain.ChainSerializationFormat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/ConcurrentChain.cs/#L152">View Source</a>
+  </span>
+  <a id="NBitcoin_ConcurrentChain_Load_" data-uid="NBitcoin.ConcurrentChain.Load*"></a>
+  <h4 id="NBitcoin_ConcurrentChain_Load_System_IO_Stream_NBitcoin_Consensus_NBitcoin_ConcurrentChain_ChainSerializationFormat_" data-uid="NBitcoin.ConcurrentChain.Load(System.IO.Stream,NBitcoin.Consensus,NBitcoin.ConcurrentChain.ChainSerializationFormat)">Load(Stream, Consensus, ConcurrentChain.ChainSerializationFormat)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Load(Stream stream, Consensus consensus, ConcurrentChain.ChainSerializationFormat format)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NBitcoin.Consensus.html">Consensus</a></td>
+        <td><span class="parametername">consensus</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NBitcoin.ConcurrentChain.ChainSerializationFormat.html">ConcurrentChain.ChainSerializationFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_Load_System_IO_Stream_NBitcoin_ConsensusFactory_NBitcoin_ConcurrentChain_ChainSerializationFormat_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.Load(System.IO.Stream%2CNBitcoin.ConsensusFactory%2CNBitcoin.ConcurrentChain.ChainSerializationFormat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/ConcurrentChain.cs/#L138">View Source</a>
+  </span>
+  <a id="NBitcoin_ConcurrentChain_Load_" data-uid="NBitcoin.ConcurrentChain.Load*"></a>
+  <h4 id="NBitcoin_ConcurrentChain_Load_System_IO_Stream_NBitcoin_ConsensusFactory_NBitcoin_ConcurrentChain_ChainSerializationFormat_" data-uid="NBitcoin.ConcurrentChain.Load(System.IO.Stream,NBitcoin.ConsensusFactory,NBitcoin.ConcurrentChain.ChainSerializationFormat)">Load(Stream, ConsensusFactory, ConcurrentChain.ChainSerializationFormat)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Load(Stream stream, ConsensusFactory consensusFactory, ConcurrentChain.ChainSerializationFormat format)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NBitcoin.ConsensusFactory.html">ConsensusFactory</a></td>
+        <td><span class="parametername">consensusFactory</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NBitcoin.ConcurrentChain.ChainSerializationFormat.html">ConcurrentChain.ChainSerializationFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_Load_System_IO_Stream_NBitcoin_Network_NBitcoin_ConcurrentChain_ChainSerializationFormat_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.Load(System.IO.Stream%2CNBitcoin.Network%2CNBitcoin.ConcurrentChain.ChainSerializationFormat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/ConcurrentChain.cs/#L145">View Source</a>
+  </span>
+  <a id="NBitcoin_ConcurrentChain_Load_" data-uid="NBitcoin.ConcurrentChain.Load*"></a>
+  <h4 id="NBitcoin_ConcurrentChain_Load_System_IO_Stream_NBitcoin_Network_NBitcoin_ConcurrentChain_ChainSerializationFormat_" data-uid="NBitcoin.ConcurrentChain.Load(System.IO.Stream,NBitcoin.Network,NBitcoin.ConcurrentChain.ChainSerializationFormat)">Load(Stream, Network, ConcurrentChain.ChainSerializationFormat)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Load(Stream stream, Network network, ConcurrentChain.ChainSerializationFormat format)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NBitcoin.Network.html">Network</a></td>
+        <td><span class="parametername">network</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NBitcoin.ConcurrentChain.ChainSerializationFormat.html">ConcurrentChain.ChainSerializationFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_SetTip_NBitcoin_ChainedBlock_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.SetTip(NBitcoin.ChainedBlock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -1438,6 +1461,8 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_WriteTo_NBitcoin_BitcoinStream_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.WriteTo(NBitcoin.BitcoinStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -1509,13 +1534,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_WriteTo_Stream_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.WriteTo(Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_WriteTo_System_IO_Stream_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.WriteTo(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/ConcurrentChain.cs/#L223">View Source</a>
   </span>
   <a id="NBitcoin_ConcurrentChain_WriteTo_" data-uid="NBitcoin.ConcurrentChain.WriteTo*"></a>
-  <h4 id="NBitcoin_ConcurrentChain_WriteTo_Stream_" data-uid="NBitcoin.ConcurrentChain.WriteTo(Stream)">WriteTo(Stream)</h4>
+  <h4 id="NBitcoin_ConcurrentChain_WriteTo_System_IO_Stream_" data-uid="NBitcoin.ConcurrentChain.WriteTo(System.IO.Stream)">WriteTo(Stream)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1533,7 +1558,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Stream</span></td>
+        <td><span class="xref">System.IO.Stream</span></td>
         <td><span class="parametername">stream</span></td>
         <td></td>
       </tr>
@@ -1541,13 +1566,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_WriteTo_Stream_NBitcoin_ConcurrentChain_ChainSerializationFormat_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.WriteTo(Stream%2CNBitcoin.ConcurrentChain.ChainSerializationFormat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_ConcurrentChain_WriteTo_System_IO_Stream_NBitcoin_ConcurrentChain_ChainSerializationFormat_.md&amp;value=---%0Auid%3A%20NBitcoin.ConcurrentChain.WriteTo(System.IO.Stream%2CNBitcoin.ConcurrentChain.ChainSerializationFormat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/ConcurrentChain.cs/#L227">View Source</a>
   </span>
   <a id="NBitcoin_ConcurrentChain_WriteTo_" data-uid="NBitcoin.ConcurrentChain.WriteTo*"></a>
-  <h4 id="NBitcoin_ConcurrentChain_WriteTo_Stream_NBitcoin_ConcurrentChain_ChainSerializationFormat_" data-uid="NBitcoin.ConcurrentChain.WriteTo(Stream,NBitcoin.ConcurrentChain.ChainSerializationFormat)">WriteTo(Stream, ConcurrentChain.ChainSerializationFormat)</h4>
+  <h4 id="NBitcoin_ConcurrentChain_WriteTo_System_IO_Stream_NBitcoin_ConcurrentChain_ChainSerializationFormat_" data-uid="NBitcoin.ConcurrentChain.WriteTo(System.IO.Stream,NBitcoin.ConcurrentChain.ChainSerializationFormat)">WriteTo(Stream, ConcurrentChain.ChainSerializationFormat)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1565,7 +1590,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Stream</span></td>
+        <td><span class="xref">System.IO.Stream</span></td>
         <td><span class="parametername">stream</span></td>
         <td></td>
       </tr>

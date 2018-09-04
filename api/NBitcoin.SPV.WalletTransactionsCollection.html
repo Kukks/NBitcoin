@@ -80,11 +80,41 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">WalletTransactionsCollection</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NBitcoin.SPV.WalletTransaction.html">WalletTransaction</a>&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.SPV.html">NBitcoin.SPV</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
   <h5 id="NBitcoin_SPV_WalletTransactionsCollection_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WalletTransactionsCollection : IEnumerable&lt;WalletTransaction&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete]
+public class WalletTransactionsCollection : IEnumerable&lt;WalletTransaction&gt;, IEnumerable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -256,7 +286,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerator</span>&lt;<a class="xref" href="NBitcoin.SPV.WalletTransaction.html">WalletTransaction</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="NBitcoin.SPV.WalletTransaction.html">WalletTransaction</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -286,11 +316,57 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="NBitcoin.Coin.html">Coin</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NBitcoin.Coin.html">Coin</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_SPV_WalletTransactionsCollection_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20NBitcoin.SPV.WalletTransactionsCollection.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/SPV/WalletTransactionsCollection.cs/#L124">View Source</a>
+  </span>
+  <a id="NBitcoin_SPV_WalletTransactionsCollection_System_Collections_IEnumerable_GetEnumerator_" data-uid="NBitcoin.SPV.WalletTransactionsCollection.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="NBitcoin_SPV_WalletTransactionsCollection_System_Collections_IEnumerable_GetEnumerator" data-uid="NBitcoin.SPV.WalletTransactionsCollection.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NBitcoin.Extensions.html#NBitcoin_Extensions_Partition__1_System_Collections_Generic_IEnumerable___0__System_Int32_">Extensions.Partition&lt;T&gt;(IEnumerable&lt;T&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.Extensions.html#NBitcoin_Extensions_Partition__1_System_Collections_Generic_IEnumerable___0__System_Func_System_Int32__">Extensions.Partition&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;Int32&gt;)</a>
+  </div>
 </article>
           </div>
           

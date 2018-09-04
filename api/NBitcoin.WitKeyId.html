@@ -102,6 +102,18 @@
     <div>
       <a class="xref" href="NBitcoin.TxDestination.html#NBitcoin_TxDestination_ToString">TxDestination.ToString()</a>
     </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.html">NBitcoin</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
@@ -301,7 +313,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Script WitScriptPubKey { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use AsKeyId().ScriptPubKey instead&quot;)]
+public Script WitScriptPubKey { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

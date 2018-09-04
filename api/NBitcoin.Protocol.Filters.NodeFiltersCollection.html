@@ -81,6 +81,11 @@
     <div class="level1"><a class="xref" href="NBitcoin.ThreadSafeCollection-1.html">ThreadSafeCollection</a>&lt;<a class="xref" href="NBitcoin.Protocol.Filters.INodeFilter.html">INodeFilter</a>&gt;</div>
     <div class="level2"><span class="xref">NodeFiltersCollection</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NBitcoin.Protocol.Filters.INodeFilter.html">INodeFilter</a>&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -102,7 +107,7 @@
       <a class="xref" href="NBitcoin.ThreadSafeCollection-1.html#NBitcoin_ThreadSafeCollection_1_FindOrCreate__1">ThreadSafeCollection&lt;INodeFilter&gt;.FindOrCreate&lt;U&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="NBitcoin.ThreadSafeCollection-1.html#NBitcoin_ThreadSafeCollection_1_FindOrCreate__1_Func___0__">ThreadSafeCollection&lt;INodeFilter&gt;.FindOrCreate&lt;U&gt;(Func&lt;U&gt;)</a>
+      <a class="xref" href="NBitcoin.ThreadSafeCollection-1.html#NBitcoin_ThreadSafeCollection_1_FindOrCreate__1_System_Func___0__">ThreadSafeCollection&lt;INodeFilter&gt;.FindOrCreate&lt;U&gt;(Func&lt;U&gt;)</a>
     </div>
     <div>
       <a class="xref" href="NBitcoin.ThreadSafeCollection-1.html#NBitcoin_ThreadSafeCollection_1_Find__1">ThreadSafeCollection&lt;INodeFilter&gt;.Find&lt;U&gt;()</a>
@@ -113,24 +118,48 @@
     <div>
       <a class="xref" href="NBitcoin.ThreadSafeCollection-1.html#NBitcoin_ThreadSafeCollection_1_GetEnumerator">ThreadSafeCollection&lt;INodeFilter&gt;.GetEnumerator()</a>
     </div>
+    <div>
+      <a class="xref" href="NBitcoin.ThreadSafeCollection-1.html#NBitcoin_ThreadSafeCollection_1_System_Collections_IEnumerable_GetEnumerator">ThreadSafeCollection&lt;INodeFilter&gt;.IEnumerable.GetEnumerator()</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.Protocol.Filters.html">NBitcoin.Protocol.Filters</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
   <h5 id="NBitcoin_Protocol_Filters_NodeFiltersCollection_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class NodeFiltersCollection : ThreadSafeCollection&lt;INodeFilter&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class NodeFiltersCollection : ThreadSafeCollection&lt;INodeFilter&gt;, IEnumerable&lt;INodeFilter&gt;, IEnumerable</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Protocol_Filters_NodeFiltersCollection_Add_Action_NBitcoin_Protocol_IncomingMessage_Action__Action_NBitcoin_Protocol_Node_NBitcoin_Protocol_Payload_Action__.md&amp;value=---%0Auid%3A%20NBitcoin.Protocol.Filters.NodeFiltersCollection.Add(Action%7BNBitcoin.Protocol.IncomingMessage%2CAction%7D%2CAction%7BNBitcoin.Protocol.Node%2CNBitcoin.Protocol.Payload%2CAction%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Protocol_Filters_NodeFiltersCollection_Add_System_Action_NBitcoin_Protocol_IncomingMessage_System_Action__System_Action_NBitcoin_Protocol_Node_NBitcoin_Protocol_Payload_System_Action__.md&amp;value=---%0Auid%3A%20NBitcoin.Protocol.Filters.NodeFiltersCollection.Add(System.Action%7BNBitcoin.Protocol.IncomingMessage%2CSystem.Action%7D%2CSystem.Action%7BNBitcoin.Protocol.Node%2CNBitcoin.Protocol.Payload%2CSystem.Action%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Protocol/Filters/NodeFiltersCollection.cs/#L12">View Source</a>
   </span>
   <a id="NBitcoin_Protocol_Filters_NodeFiltersCollection_Add_" data-uid="NBitcoin.Protocol.Filters.NodeFiltersCollection.Add*"></a>
-  <h4 id="NBitcoin_Protocol_Filters_NodeFiltersCollection_Add_Action_NBitcoin_Protocol_IncomingMessage_Action__Action_NBitcoin_Protocol_Node_NBitcoin_Protocol_Payload_Action__" data-uid="NBitcoin.Protocol.Filters.NodeFiltersCollection.Add(Action{NBitcoin.Protocol.IncomingMessage,Action},Action{NBitcoin.Protocol.Node,NBitcoin.Protocol.Payload,Action})">Add(Action&lt;IncomingMessage, Action&gt;, Action&lt;Node, Payload, Action&gt;)</h4>
+  <h4 id="NBitcoin_Protocol_Filters_NodeFiltersCollection_Add_System_Action_NBitcoin_Protocol_IncomingMessage_System_Action__System_Action_NBitcoin_Protocol_Node_NBitcoin_Protocol_Payload_System_Action__" data-uid="NBitcoin.Protocol.Filters.NodeFiltersCollection.Add(System.Action{NBitcoin.Protocol.IncomingMessage,System.Action},System.Action{NBitcoin.Protocol.Node,NBitcoin.Protocol.Payload,System.Action})">Add(Action&lt;IncomingMessage, Action&gt;, Action&lt;Node, Payload, Action&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -148,12 +177,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="NBitcoin.Protocol.IncomingMessage.html">IncomingMessage</a>, <span class="xref">Action</span>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="NBitcoin.Protocol.IncomingMessage.html">IncomingMessage</a>, <span class="xref">System.Action</span>&gt;</td>
         <td><span class="parametername">onReceiving</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="NBitcoin.Protocol.Node.html">Node</a>, <a class="xref" href="NBitcoin.Protocol.Payload.html">Payload</a>, <span class="xref">Action</span>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="NBitcoin.Protocol.Node.html">Node</a>, <a class="xref" href="NBitcoin.Protocol.Payload.html">Payload</a>, <span class="xref">System.Action</span>&gt;</td>
         <td><span class="parametername">onSending</span></td>
         <td></td>
       </tr>
@@ -169,11 +198,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IDisposable</span></td>
+        <td><span class="xref">System.IDisposable</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NBitcoin.Extensions.html#NBitcoin_Extensions_Partition__1_System_Collections_Generic_IEnumerable___0__System_Int32_">Extensions.Partition&lt;T&gt;(IEnumerable&lt;T&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.Extensions.html#NBitcoin_Extensions_Partition__1_System_Collections_Generic_IEnumerable___0__System_Func_System_Int32__">Extensions.Partition&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;Int32&gt;)</a>
+  </div>
 </article>
           </div>
           

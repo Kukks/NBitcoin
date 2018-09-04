@@ -84,7 +84,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="NBitcoin.Protocol.MessageListener-1.html">MessageListener</a>&lt;<a class="xref" href="NBitcoin.Protocol.IncomingMessage.html">IncomingMessage</a>&gt;</div>
-    <div><span class="xref">IDisposable</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -92,10 +92,31 @@
       <a class="xref" href="NBitcoin.Protocol.PollMessageListener-1.html#NBitcoin_Protocol_PollMessageListener_1_MessageQueue">PollMessageListener&lt;IncomingMessage&gt;.MessageQueue</a>
     </div>
     <div>
-      <a class="xref" href="NBitcoin.Protocol.PollMessageListener-1.html#NBitcoin_Protocol_PollMessageListener_1_ReceiveMessage_CancellationToken_">PollMessageListener&lt;IncomingMessage&gt;.ReceiveMessage(CancellationToken)</a>
+      <a class="xref" href="NBitcoin.Protocol.PollMessageListener-1.html#NBitcoin_Protocol_PollMessageListener_1_ReceiveMessage_System_Threading_CancellationToken_">PollMessageListener&lt;IncomingMessage&gt;.ReceiveMessage(CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="NBitcoin.Protocol.PollMessageListener-1.html#NBitcoin_Protocol_PollMessageListener_1_PushMessage__0_">PollMessageListener&lt;IncomingMessage&gt;.PushMessage(IncomingMessage)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.Protocol.html">NBitcoin.Protocol</a></h6>
@@ -235,18 +256,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Protocol_NodeListener_ReceivePayload__1_CancellationToken_.md&amp;value=---%0Auid%3A%20NBitcoin.Protocol.NodeListener.ReceivePayload%60%601(CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Protocol_NodeListener_ReceivePayload__1_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20NBitcoin.Protocol.NodeListener.ReceivePayload%60%601(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Protocol/NodeListener.cs/#L39">View Source</a>
   </span>
   <a id="NBitcoin_Protocol_NodeListener_ReceivePayload_" data-uid="NBitcoin.Protocol.NodeListener.ReceivePayload*"></a>
-  <h4 id="NBitcoin_Protocol_NodeListener_ReceivePayload__1_CancellationToken_" data-uid="NBitcoin.Protocol.NodeListener.ReceivePayload``1(CancellationToken)">ReceivePayload&lt;TPayload&gt;(CancellationToken)</h4>
+  <h4 id="NBitcoin_Protocol_NodeListener_ReceivePayload__1_System_Threading_CancellationToken_" data-uid="NBitcoin.Protocol.NodeListener.ReceivePayload``1(System.Threading.CancellationToken)">ReceivePayload&lt;TPayload&gt;(CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TPayload ReceivePayload&lt;TPayload&gt;(CancellationToken cancellationToken = null)
+    <pre><code class="lang-csharp hljs">public TPayload ReceivePayload&lt;TPayload&gt;(CancellationToken cancellationToken = default(CancellationToken))
     where TPayload : Payload</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -260,7 +281,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -298,13 +319,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Protocol_NodeListener_Where_Func_NBitcoin_Protocol_IncomingMessage_System_Boolean__.md&amp;value=---%0Auid%3A%20NBitcoin.Protocol.NodeListener.Where(Func%7BNBitcoin.Protocol.IncomingMessage%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Protocol_NodeListener_Where_System_Func_NBitcoin_Protocol_IncomingMessage_System_Boolean__.md&amp;value=---%0Auid%3A%20NBitcoin.Protocol.NodeListener.Where(System.Func%7BNBitcoin.Protocol.IncomingMessage%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Protocol/NodeListener.cs/#L28">View Source</a>
   </span>
   <a id="NBitcoin_Protocol_NodeListener_Where_" data-uid="NBitcoin.Protocol.NodeListener.Where*"></a>
-  <h4 id="NBitcoin_Protocol_NodeListener_Where_Func_NBitcoin_Protocol_IncomingMessage_System_Boolean__" data-uid="NBitcoin.Protocol.NodeListener.Where(Func{NBitcoin.Protocol.IncomingMessage,System.Boolean})">Where(Func&lt;IncomingMessage, Boolean&gt;)</h4>
+  <h4 id="NBitcoin_Protocol_NodeListener_Where_System_Func_NBitcoin_Protocol_IncomingMessage_System_Boolean__" data-uid="NBitcoin.Protocol.NodeListener.Where(System.Func{NBitcoin.Protocol.IncomingMessage,System.Boolean})">Where(Func&lt;IncomingMessage, Boolean&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -322,7 +343,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="NBitcoin.Protocol.IncomingMessage.html">IncomingMessage</a>, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NBitcoin.Protocol.IncomingMessage.html">IncomingMessage</a>, <span class="xref">System.Boolean</span>&gt;</td>
         <td><span class="parametername">predicate</span></td>
         <td></td>
       </tr>
@@ -348,7 +369,7 @@
       <a class="xref" href="NBitcoin.Protocol.MessageListener-1.html">MessageListener&lt;T&gt;</a>
   </div>
   <div>
-      <span class="xref">IDisposable</span>
+      <span class="xref">System.IDisposable</span>
   </div>
 </article>
           </div>

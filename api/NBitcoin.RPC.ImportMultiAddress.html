@@ -80,11 +80,36 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ImportMultiAddress</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.RPC.html">NBitcoin.RPC</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
   <h5 id="NBitcoin_RPC_ImportMultiAddress_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ImportMultiAddress : object</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonObject(MemberSerialization.OptIn)]
+public class ImportMultiAddress</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -101,7 +126,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? Internal { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;internal&quot;, NullValueHandling = NullValueHandling.Ignore)]
+public bool? Internal { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,7 +157,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] Keys { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;keys&quot;, NullValueHandling = NullValueHandling.Ignore)]
+public string[] Keys { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -161,7 +188,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Label { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;label&quot;, NullValueHandling = NullValueHandling.Ignore)]
+public string Label { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -191,7 +219,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] PubKeys { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;pubkeys&quot;, NullValueHandling = NullValueHandling.Ignore)]
+public string[] PubKeys { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -221,7 +250,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string RedeemScript { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;redeemscript&quot;, NullValueHandling = NullValueHandling.Ignore)]
+public string RedeemScript { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -251,7 +281,9 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ImportMultiAddress.ScriptPubKeyObject ScriptPubKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;scriptPubKey&quot;, NullValueHandling = NullValueHandling.Ignore)]
+[JsonConverter(typeof(ImportMultiScriptPubKeyConverter))]
+public ImportMultiAddress.ScriptPubKeyObject ScriptPubKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -282,7 +314,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTimeOffset? Timestamp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;timestamp&quot;)]
+public DateTimeOffset? Timestamp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -294,7 +327,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">DateTimeOffset</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -312,7 +345,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? WatchOnly { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;watchonly&quot;, NullValueHandling = NullValueHandling.Ignore)]
+public bool? WatchOnly { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

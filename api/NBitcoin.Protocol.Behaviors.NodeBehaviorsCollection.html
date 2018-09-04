@@ -81,6 +81,11 @@
     <div class="level1"><a class="xref" href="NBitcoin.ThreadSafeCollection-1.html">ThreadSafeCollection</a>&lt;<a class="xref" href="NBitcoin.Protocol.Behaviors.INodeBehavior.html">INodeBehavior</a>&gt;</div>
     <div class="level2"><span class="xref">NodeBehaviorsCollection</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NBitcoin.Protocol.Behaviors.INodeBehavior.html">INodeBehavior</a>&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -96,7 +101,7 @@
       <a class="xref" href="NBitcoin.ThreadSafeCollection-1.html#NBitcoin_ThreadSafeCollection_1_FindOrCreate__1">ThreadSafeCollection&lt;INodeBehavior&gt;.FindOrCreate&lt;U&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="NBitcoin.ThreadSafeCollection-1.html#NBitcoin_ThreadSafeCollection_1_FindOrCreate__1_Func___0__">ThreadSafeCollection&lt;INodeBehavior&gt;.FindOrCreate&lt;U&gt;(Func&lt;U&gt;)</a>
+      <a class="xref" href="NBitcoin.ThreadSafeCollection-1.html#NBitcoin_ThreadSafeCollection_1_FindOrCreate__1_System_Func___0__">ThreadSafeCollection&lt;INodeBehavior&gt;.FindOrCreate&lt;U&gt;(Func&lt;U&gt;)</a>
     </div>
     <div>
       <a class="xref" href="NBitcoin.ThreadSafeCollection-1.html#NBitcoin_ThreadSafeCollection_1_Find__1">ThreadSafeCollection&lt;INodeBehavior&gt;.Find&lt;U&gt;()</a>
@@ -107,12 +112,36 @@
     <div>
       <a class="xref" href="NBitcoin.ThreadSafeCollection-1.html#NBitcoin_ThreadSafeCollection_1_GetEnumerator">ThreadSafeCollection&lt;INodeBehavior&gt;.GetEnumerator()</a>
     </div>
+    <div>
+      <a class="xref" href="NBitcoin.ThreadSafeCollection-1.html#NBitcoin_ThreadSafeCollection_1_System_Collections_IEnumerable_GetEnumerator">ThreadSafeCollection&lt;INodeBehavior&gt;.IEnumerable.GetEnumerator()</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.Protocol.Behaviors.html">NBitcoin.Protocol.Behaviors</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
   <h5 id="NBitcoin_Protocol_Behaviors_NodeBehaviorsCollection_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class NodeBehaviorsCollection : ThreadSafeCollection&lt;INodeBehavior&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class NodeBehaviorsCollection : ThreadSafeCollection&lt;INodeBehavior&gt;, IEnumerable&lt;INodeBehavior&gt;, IEnumerable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -218,6 +247,20 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">NBitcoin.ThreadSafeCollection&lt;NBitcoin.Protocol.Behaviors.INodeBehavior&gt;.OnRemoved(NBitcoin.Protocol.Behaviors.INodeBehavior)</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NBitcoin.Extensions.html#NBitcoin_Extensions_Partition__1_System_Collections_Generic_IEnumerable___0__System_Int32_">Extensions.Partition&lt;T&gt;(IEnumerable&lt;T&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.Extensions.html#NBitcoin_Extensions_Partition__1_System_Collections_Generic_IEnumerable___0__System_Func_System_Int32__">Extensions.Partition&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;Int32&gt;)</a>
+  </div>
 </article>
           </div>
           

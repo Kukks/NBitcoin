@@ -84,11 +84,35 @@
     <h5>Implements</h5>
     <div><a class="xref" href="NBitcoin.ITransactionRepository.html">ITransactionRepository</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.html">NBitcoin</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
   <h5 id="NBitcoin_RPCTransactionRepository_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RPCTransactionRepository : object, ITransactionRepository</code></pre>
+    <pre><code class="lang-csharp hljs">public class RPCTransactionRepository : ITransactionRepository</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -168,7 +192,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -215,7 +239,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="NBitcoin.Transaction.html">Transaction</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="NBitcoin.Transaction.html">Transaction</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -267,7 +291,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -275,6 +299,25 @@
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="NBitcoin.ITransactionRepository.html">ITransactionRepository</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NBitcoin.TxRepoExtensions.html#NBitcoin_TxRepoExtensions_GetAsync_NBitcoin_ITransactionRepository_System_String_">TxRepoExtensions.GetAsync(ITransactionRepository, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.TxRepoExtensions.html#NBitcoin_TxRepoExtensions_PutAsync_NBitcoin_ITransactionRepository_NBitcoin_Transaction_">TxRepoExtensions.PutAsync(ITransactionRepository, Transaction)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.TxRepoExtensions.html#NBitcoin_TxRepoExtensions_Get_NBitcoin_ITransactionRepository_System_String_">TxRepoExtensions.Get(ITransactionRepository, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.TxRepoExtensions.html#NBitcoin_TxRepoExtensions_Put_NBitcoin_ITransactionRepository_NBitcoin_Transaction_">TxRepoExtensions.Put(ITransactionRepository, Transaction)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.TxRepoExtensions.html#NBitcoin_TxRepoExtensions_Get_NBitcoin_ITransactionRepository_NBitcoin_uint256_">TxRepoExtensions.Get(ITransactionRepository, uint256)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.TxRepoExtensions.html#NBitcoin_TxRepoExtensions_Put_NBitcoin_ITransactionRepository_NBitcoin_uint256_NBitcoin_Transaction_">TxRepoExtensions.Put(ITransactionRepository, uint256, Transaction)</a>
   </div>
 </article>
           </div>

@@ -83,13 +83,38 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="NBitcoin.Protocol.IReadOnlyNodesCollection.html">IReadOnlyNodesCollection</a></div>
-    <div><span class="xref">IEnumerable</span>&lt;<a class="xref" href="NBitcoin.Protocol.Node.html">Node</a>&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NBitcoin.Protocol.Node.html">Node</a>&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.Protocol.html">NBitcoin.Protocol</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
   <h5 id="NBitcoin_Protocol_NodesCollection_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class NodesCollection : IEnumerable&lt;Node&gt;, IReadOnlyNodesCollection, IEnumerable&lt;Node&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class NodesCollection : IReadOnlyNodesCollection, IEnumerable&lt;Node&gt;, IEnumerable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -236,18 +261,18 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Protocol_NodesCollection_DisconnectAll_CancellationToken_.md&amp;value=---%0Auid%3A%20NBitcoin.Protocol.NodesCollection.DisconnectAll(CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Protocol_NodesCollection_DisconnectAll_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20NBitcoin.Protocol.NodesCollection.DisconnectAll(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Protocol/NodesCollection.cs/#L186">View Source</a>
   </span>
   <a id="NBitcoin_Protocol_NodesCollection_DisconnectAll_" data-uid="NBitcoin.Protocol.NodesCollection.DisconnectAll*"></a>
-  <h4 id="NBitcoin_Protocol_NodesCollection_DisconnectAll_CancellationToken_" data-uid="NBitcoin.Protocol.NodesCollection.DisconnectAll(CancellationToken)">DisconnectAll(CancellationToken)</h4>
+  <h4 id="NBitcoin_Protocol_NodesCollection_DisconnectAll_System_Threading_CancellationToken_" data-uid="NBitcoin.Protocol.NodesCollection.DisconnectAll(System.Threading.CancellationToken)">DisconnectAll(CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DisconnectAll(CancellationToken cancellation = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DisconnectAll(CancellationToken cancellation = default(CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -260,7 +285,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellation</span></td>
         <td></td>
       </tr>
@@ -268,13 +293,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Protocol_NodesCollection_FindByEndpoint_IPEndPoint_.md&amp;value=---%0Auid%3A%20NBitcoin.Protocol.NodesCollection.FindByEndpoint(IPEndPoint)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Protocol_NodesCollection_FindByEndpoint_System_Net_IPEndPoint_.md&amp;value=---%0Auid%3A%20NBitcoin.Protocol.NodesCollection.FindByEndpoint(System.Net.IPEndPoint)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Protocol/NodesCollection.cs/#L146">View Source</a>
   </span>
   <a id="NBitcoin_Protocol_NodesCollection_FindByEndpoint_" data-uid="NBitcoin.Protocol.NodesCollection.FindByEndpoint*"></a>
-  <h4 id="NBitcoin_Protocol_NodesCollection_FindByEndpoint_IPEndPoint_" data-uid="NBitcoin.Protocol.NodesCollection.FindByEndpoint(IPEndPoint)">FindByEndpoint(IPEndPoint)</h4>
+  <h4 id="NBitcoin_Protocol_NodesCollection_FindByEndpoint_System_Net_IPEndPoint_" data-uid="NBitcoin.Protocol.NodesCollection.FindByEndpoint(System.Net.IPEndPoint)">FindByEndpoint(IPEndPoint)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -292,7 +317,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
+        <td><span class="xref">System.Net.IPEndPoint</span></td>
         <td><span class="parametername">endpoint</span></td>
         <td></td>
       </tr>
@@ -315,13 +340,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Protocol_NodesCollection_FindByIp_IPAddress_.md&amp;value=---%0Auid%3A%20NBitcoin.Protocol.NodesCollection.FindByIp(IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Protocol_NodesCollection_FindByIp_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20NBitcoin.Protocol.NodesCollection.FindByIp(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Protocol/NodesCollection.cs/#L138">View Source</a>
   </span>
   <a id="NBitcoin_Protocol_NodesCollection_FindByIp_" data-uid="NBitcoin.Protocol.NodesCollection.FindByIp*"></a>
-  <h4 id="NBitcoin_Protocol_NodesCollection_FindByIp_IPAddress_" data-uid="NBitcoin.Protocol.NodesCollection.FindByIp(IPAddress)">FindByIp(IPAddress)</h4>
+  <h4 id="NBitcoin_Protocol_NodesCollection_FindByIp_System_Net_IPAddress_" data-uid="NBitcoin.Protocol.NodesCollection.FindByIp(System.Net.IPAddress)">FindByIp(IPAddress)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -339,7 +364,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPAddress</span></td>
+        <td><span class="xref">System.Net.IPAddress</span></td>
         <td><span class="parametername">ip</span></td>
         <td></td>
       </tr>
@@ -415,7 +440,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerator</span>&lt;<a class="xref" href="NBitcoin.Protocol.Node.html">Node</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="NBitcoin.Protocol.Node.html">Node</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -493,7 +518,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">EventHandler</span>&lt;<a class="xref" href="NBitcoin.Protocol.NodeEventArgs.html">NodeEventArgs</a>&gt;</td>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NBitcoin.Protocol.NodeEventArgs.html">NodeEventArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -522,7 +547,39 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">EventHandler</span>&lt;<a class="xref" href="NBitcoin.Protocol.NodeEventArgs.html">NodeEventArgs</a>&gt;</td>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NBitcoin.Protocol.NodeEventArgs.html">NodeEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Protocol_NodesCollection_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20NBitcoin.Protocol.NodesCollection.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Protocol/NodesCollection.cs/#L179">View Source</a>
+  </span>
+  <a id="NBitcoin_Protocol_NodesCollection_System_Collections_IEnumerable_GetEnumerator_" data-uid="NBitcoin.Protocol.NodesCollection.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="NBitcoin_Protocol_NodesCollection_System_Collections_IEnumerable_GetEnumerator" data-uid="NBitcoin.Protocol.NodesCollection.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -532,7 +589,17 @@
       <a class="xref" href="NBitcoin.Protocol.IReadOnlyNodesCollection.html">IReadOnlyNodesCollection</a>
   </div>
   <div>
-      <span class="xref">IEnumerable&lt;&gt;</span>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NBitcoin.Extensions.html#NBitcoin_Extensions_Partition__1_System_Collections_Generic_IEnumerable___0__System_Int32_">Extensions.Partition&lt;T&gt;(IEnumerable&lt;T&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NBitcoin.Extensions.html#NBitcoin_Extensions_Partition__1_System_Collections_Generic_IEnumerable___0__System_Func_System_Int32__">Extensions.Partition&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;Int32&gt;)</a>
   </div>
 </article>
           </div>

@@ -82,18 +82,33 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IComparable</span>&lt;<a class="xref" href="NBitcoin.Money.html">Money</a>&gt;</div>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="NBitcoin.Money.html">Money</a>&gt;</div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="NBitcoin.Money.html">Money</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="NBitcoin.Money.html">Money</a>&gt;</div>
     <div><a class="xref" href="NBitcoin.IMoney.html">IMoney</a></div>
-    <div><span class="xref">IComparable</span></div>
-    <div><span class="xref">IComparable</span>&lt;<a class="xref" href="NBitcoin.IMoney.html">IMoney</a>&gt;</div>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="NBitcoin.IMoney.html">IMoney</a>&gt;</div>
+    <div><span class="xref">System.IComparable</span></div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="NBitcoin.IMoney.html">IMoney</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="NBitcoin.IMoney.html">IMoney</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NBitcoin.html">NBitcoin</a></h6>
   <h6><strong>Assembly</strong>: NBitcoin.dll</h6>
   <h5 id="NBitcoin_Money_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Money : IComparable, IComparable&lt;Money&gt;, IEquatable&lt;Money&gt;, IMoney, IComparable, IComparable&lt;IMoney&gt;, IEquatable&lt;IMoney&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class Money : IComparable&lt;Money&gt;, IEquatable&lt;Money&gt;, IMoney, IComparable, IComparable&lt;IMoney&gt;, IEquatable&lt;IMoney&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -276,7 +291,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const long CENT = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const long CENT = 1000000L</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,7 +320,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const long COIN = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const long COIN = 100000000L</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -334,7 +349,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const long NANO = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const long NANO = 10000L</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -885,6 +900,8 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Money_FromUnit_System_Decimal_NBitcoin_MoneyUnit_.md&amp;value=---%0Auid%3A%20NBitcoin.Money.FromUnit(System.Decimal%2CNBitcoin.MoneyUnit)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -967,6 +984,8 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Money_Max_NBitcoin_Money_NBitcoin_Money_.md&amp;value=---%0Auid%3A%20NBitcoin.Money.Max(NBitcoin.Money%2CNBitcoin.Money)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -1304,7 +1323,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="NBitcoin.Money.html">Money</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NBitcoin.Money.html">Money</a>&gt;</td>
         <td><p>The splitted money</p>
 </td>
       </tr>
@@ -1389,6 +1408,8 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Money_ToString_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20NBitcoin.Money.ToString(System.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -2767,7 +2788,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="NBitcoin.IMoney.html">IMoney</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NBitcoin.IMoney.html">IMoney</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -2819,24 +2840,165 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Money_System_IComparable_CompareTo_System_Object_.md&amp;value=---%0Auid%3A%20NBitcoin.Money.System%23IComparable%23CompareTo(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Money.cs/#L778">View Source</a>
+  </span>
+  <a id="NBitcoin_Money_System_IComparable_CompareTo_" data-uid="NBitcoin.Money.System#IComparable#CompareTo*"></a>
+  <h4 id="NBitcoin_Money_System_IComparable_CompareTo_System_Object_" data-uid="NBitcoin.Money.System#IComparable#CompareTo(System.Object)">IComparable.CompareTo(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int IComparable.CompareTo(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Money_System_IComparable_NBitcoin_IMoney__CompareTo_NBitcoin_IMoney_.md&amp;value=---%0Auid%3A%20NBitcoin.Money.System%23IComparable%7BNBitcoin%23IMoney%7D%23CompareTo(NBitcoin.IMoney)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Money.cs/#L787">View Source</a>
+  </span>
+  <a id="NBitcoin_Money_System_IComparable_NBitcoin_IMoney__CompareTo_" data-uid="NBitcoin.Money.System#IComparable{NBitcoin#IMoney}#CompareTo*"></a>
+  <h4 id="NBitcoin_Money_System_IComparable_NBitcoin_IMoney__CompareTo_NBitcoin_IMoney_" data-uid="NBitcoin.Money.System#IComparable{NBitcoin#IMoney}#CompareTo(NBitcoin.IMoney)">IComparable&lt;IMoney&gt;.CompareTo(IMoney)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int IComparable&lt;IMoney&gt;.CompareTo(IMoney other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NBitcoin.IMoney.html">IMoney</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kukks/NBitcoin/new/feature/docs/apiSpec/new?filename=NBitcoin_Money_System_IEquatable_NBitcoin_IMoney__Equals_NBitcoin_IMoney_.md&amp;value=---%0Auid%3A%20NBitcoin.Money.System%23IEquatable%7BNBitcoin%23IMoney%7D%23Equals(NBitcoin.IMoney)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kukks/NBitcoin/blob/feature/docs/NBitcoin/Money.cs/#L796">View Source</a>
+  </span>
+  <a id="NBitcoin_Money_System_IEquatable_NBitcoin_IMoney__Equals_" data-uid="NBitcoin.Money.System#IEquatable{NBitcoin#IMoney}#Equals*"></a>
+  <h4 id="NBitcoin_Money_System_IEquatable_NBitcoin_IMoney__Equals_NBitcoin_IMoney_" data-uid="NBitcoin.Money.System#IEquatable{NBitcoin#IMoney}#Equals(NBitcoin.IMoney)">IEquatable&lt;IMoney&gt;.Equals(IMoney)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IEquatable&lt;IMoney&gt;.Equals(IMoney other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NBitcoin.IMoney.html">IMoney</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IComparable&lt;&gt;</span>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
   </div>
   <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
   <div>
       <a class="xref" href="NBitcoin.IMoney.html">IMoney</a>
   </div>
   <div>
-      <span class="xref">IComparable</span>
+      <span class="xref">System.IComparable</span>
   </div>
   <div>
-      <span class="xref">IComparable&lt;&gt;</span>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
   </div>
   <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
 </article>
           </div>
