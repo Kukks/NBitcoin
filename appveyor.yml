@@ -83,7 +83,11 @@ test_script:
 #---------------------------------#     
 
 on_success: 
-- ps: if (Test-Path env:APPVEYOR_PULL_REQUEST_NUMBER) { exit 0 }
+- ps: |
+        Write-Host "APPVEYOR_PULL_REQUEST_NUMBER [$env:APPVEYOR_PULL_REQUEST_NUMBER] "
+        if (Test-Path env:APPVEYOR_PULL_REQUEST_NUMBER) { 
+            exit
+        }
 - cinst docfx
 - git config --global credential.helper store
 - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
