@@ -85,15 +85,14 @@ test_script:
 on_success: 
 - ps: |
         Write-Host "APPVEYOR_PULL_REQUEST_NUMBER [$env:APPVEYOR_PULL_REQUEST_NUMBER] "
-        if (Test-Path env:APPVEYOR_PULL_REQUEST_NUMBER) { 
-            exit
+        if (-not (Test-Path env:APPVEYOR_PULL_REQUEST_NUMBER)) { 
+            cinst docfx
+            git config --global credential.helper store
+            Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
+            git config --global user.email %github_email%
+            git config --global user.name %github_user%
+            sh ./docs/release.sh 
         }
-- cinst docfx
-- git config --global credential.helper store
-- ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
-- git config --global user.email %github_email%
-- git config --global user.name %github_user%
-- bash ./docs/release.sh   
 #---------------------------------#
       
 #---------------------------------#
