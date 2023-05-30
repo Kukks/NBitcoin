@@ -4573,6 +4573,101 @@ namespace NBitcoin.Tests
 			return pubkeys;
 		}
 
+		[Fact]
+		public void TestBorromean()
+		{
+			var e0 = new byte[32];
+			var s = new Scalar[64];
+			var pubs = new GEJ[64];
+			var k = new Scalar[8];
+			var sec = new Scalar[8];
+			var ge = new GE();
+			Scalar one = Scalar.One;
+			byte[] m = new byte[32];
+			uint[] rsizes = new uint[8];
+			uint[] secidx = new uint[8];
+			uint nrings;
+			ulong i;
+			ulong j;
+			ulong c;
+
+			m = RandomUtils.GetBytes(32);
+			nrings = 1 + (RandomUtils.GetUInt32() & 7);
+			c = 0;
+			one = Scalar.One;
+
+			if ((RandomUtils.GetUInt32() & 1) != 0)
+			{
+				one = one.Negate();
+			}
+
+			for (i = 0; i < nrings; i++)
+			{
+				rsizes[i] = 1 + (RandomUtils.GetUInt32() & 7);
+				secidx[i] = RandomUtils.GetUInt32() % rsizes[i];
+
+				sec[i] = random_scalar_order();
+				k[i] = random_scalar_order();
+
+				if ((RandomUtils.GetUInt32() & 7) == 1)
+				{
+					sec[i] = one;
+				}
+
+				if ((RandomUtils.GetUInt32() & 7) == 1)
+				{
+					k[i] = one;
+				}
+
+				for (j = 0; j < rsizes[i]; j++)
+				{
+					s[c + j] = random_scalar_order();
+
+					if ((RandomUtils.GetUInt32() & 7) == 1)
+					{
+						s[i] = one;
+					}
+
+					if (j == secidx[i])
+					{
+						pubs[c + j] = Context.Instance.EcMultGenContext.MultGen(sec[i]);
+					}
+					else
+					{
+						ge = random_group_element_test();
+
+						random_group_element_jacobian_test(ref pubs[c + j], ref ge);
+					}
+				}
+
+				c += rsizes[i];
+			}
+
+			Assert.True(Borromean.Sign(e0, s, pubs, k, sec, rsizes, secidx, nrings, m));
+			Assert.True(Borromean.Verify(null, e0, s, pubs, rsizes, nrings, m));
+
+			i = (ulong) RandomUtils.GetUInt32() % c;
+			s[i] = s[i].Negate();
+			Assert.False(Borromean.Verify(null, e0, s, pubs, rsizes, nrings, m));
+
+			s[i] = s[i].Negate();
+
+			for (j = 0; j < 4; j++)
+			{
+				i = RandomUtils.GetUInt32() % c;
+
+				if ((RandomUtils.GetUInt32() & 1) == 1)
+				{
+					pubs[i] = pubs[i].Double();
+				}
+				else
+				{
+					s[i] = s[i].Add(one);
+				}
+
+				Assert.False(Borromean.Verify(null, e0, s, pubs, rsizes, nrings, m));
+			}
+		}
 	}
 }
 #endif
