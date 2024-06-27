@@ -22,15 +22,15 @@ namespace NBitcoin.Secp256k1
 			return sha.GetHash();
 		}
 
-		public static bool Verify(Scalar[] evalues, byte[] e0, Scalar[] s, GEJ[] pubs, uint[] rsizes,
-			uint nrings, byte[] m)
+		public static bool Verify(Scalar[] evalues, byte[] e0, Scalar[] s, GEJ[] pubs, int[] rsizes,
+			int nrings, byte[] m)
 		{
 			using SHA256 sha256_e0 = new SHA256();
 
 			if (e0 == null || s == null || pubs == null || rsizes == null || nrings == 0 || m == null)
 				return false;
 
-			ulong count = 0;
+			int count = 0;
 			sha256_e0.Initialize();
 
 			for (uint i = 0; i < nrings; i++)
@@ -81,13 +81,13 @@ namespace NBitcoin.Secp256k1
 			return ECPubKey.secp256k1_memcmp_var(e0, hashResult, 32) == 0;
 		}
 
-		public static bool Sign(byte[] e0, Scalar[] s, GEJ[] pubs, Scalar[] k, Scalar[] sec, uint[] rsizes,
-			uint[] secidx, uint nrings, byte[] m)
+		public static bool Sign(byte[] e0, Scalar[] s, GEJ[] pubs, Scalar[] k, Scalar[] sec, int[] rsizes,
+			uint[] secidx, int nrings, byte[] m)
 		{
 			GEJ rgej = new GEJ();
 			GE rge = new GE();
 			Scalar ens = new Scalar();
-			ulong count;
+			int count;
 			byte[] hashResult;
 			using SHA256 sha256_e0 = new SHA256();
 
@@ -100,7 +100,7 @@ namespace NBitcoin.Secp256k1
 
 			for (uint i = 0; i < nrings; i++)
 			{
-				if (int.MaxValue - count <= rsizes[i])
+				if ((int.MaxValue - count) <= rsizes[i])
 					return false;
 
 				rgej = ECMultGenContext.Instance.MultGen(k[i]);
